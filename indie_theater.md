@@ -56,6 +56,7 @@ Embed trailers
 
 Features
 ====
+Carousel for front page: https://github.com/appacademy/js-curriculum/blob/master/projects/store.md
 Contact Form
 Browse Showtimes by Date, Rating, 3D
 Movies Index - Now Playing and Coming Soon

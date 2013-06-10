@@ -283,25 +283,48 @@
 	.content-movie {
 		margin: auto;
 		width: 800px;
-		border-left: 1px solid #34495e;
-		border-right: 1px solid #34495e;
 	}
 		
 	.movie-title {
 		float: left;
+		font-weight: bold;
+		font-size: 20px;
 	}
 	
 	.release-date {
 		float: right;
+		font-size: 14px;
 	}
 	
 	.movie-poster {
 		float: left;
+		width: 200px;
+		height: 300px;
+		padding: 0 0 0 20px; 
+	}
+	
+	.movie-poster > a {
+		display: block;
+		border: 1px solid #999;
+	}
+	
+	.movie-poster > a > img {
+		width: 198px;
+		height: 298px;
 	}
 	
 	.movie-text {
-		float: left;
-		padding: 0 0 0 20px;
+		float: right;
+		width: 550px;
+	}
+	
+	.trailer {
+		margin: 10px 0 0 0;
+		background-color: #27ae60;
+		color: #ecf0f1;
+		border-radius: 7px;
+		border: 0;
+		cursor: pointer;
 	}
 		</style>
 	</head>
@@ -330,16 +353,17 @@
 		
 	  <div class="content group">
 	    <section class="content-movie">
+				
 				<header class="vital-info group">
 					<h2 class="movie-title">Now You See Me (PG-13)</h2>
-					<h2 class="release-date">Release Date: May 31, 2013</h2>
+					<hp class="release-date"><strong>Release Date:</strong> May 31, 2013</p>
 				</header>
 				
         <article class="post">
           <header class="group">
       
             <div class="movie-poster">
-              <a href="#"><img src="now_you_see_me_poster.jpg" width="200" height="300" alt=""></a>
+              <a href="#"><img src="now_you_see_me_poster.jpg" alt=""></a>
             </div>
       
             <div class="movie-text">
@@ -352,6 +376,8 @@
 								<strong>Runtime:</strong> 116 mins.<br>
 								<strong>Released By:</strong> Lionsgate Films
 							</p>
+							
+							<button class="trailer">Trailer</button>
             </div>
       
           </header>
