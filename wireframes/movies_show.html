@@ -270,7 +270,6 @@
 		}
 
 		.content-header {
-  
 		}
 
 		.content-header > h2 {
@@ -278,9 +277,33 @@
 			font-weight: bold;
 			text-align: left;
 		}
+
+	/* --- MOVIE INFO --- */	
+	
+	.content-movie {
+		margin: auto;
+		width: 800px;
+		border-left: 1px solid #34495e;
+		border-right: 1px solid #34495e;
+	}
+		
+	.movie-title {
+		float: left;
+	}
+	
+	.release-date {
+		float: right;
+	}
+	
+	.movie-poster {
+		float: left;
+	}
+	
+	.movie-text {
+		float: left;
+		padding: 0 0 0 20px;
+	}
 		</style>
-		
-		
 	</head>
 
 	<body>
@@ -306,7 +329,37 @@
 		</header>
 		
 	  <div class="content group">
-	    <section class="content-left">
+	    <section class="content-movie">
+				<header class="vital-info group">
+					<h2 class="movie-title">Now You See Me (PG-13)</h2>
+					<h2 class="release-date">Release Date: May 31, 2013</h2>
+				</header>
+				
+        <article class="post">
+          <header class="group">
+      
+            <div class="movie-poster">
+              <a href="#"><img src="now_you_see_me_poster.jpg" width="200" height="300" alt=""></a>
+            </div>
+      
+            <div class="movie-text">
+              <p>
+								During their performances, the world's greatest illusionists known as "The Four Horsemen" pull off a series of daring heists against corrupt business leaders. The super-team of illusionists shower the stolen profits on their audiences while staying one step ahead of an elite FBI squad in a game of cat and mouse. 
+							<br>
+							<br>
+								<strong>Starring:</strong> Mark Ruffalo, Jesse Eisenberg<br>
+								<strong>Director:</strong> Louis Leterrier<br>
+								<strong>Runtime:</strong> 116 mins.<br>
+								<strong>Released By:</strong> Lionsgate Films
+							</p>
+            </div>
+      
+          </header>
+        </article>
+				
+			</section>
+			
+			<section class="content-left">
       
 	      <header class="content-header">
 	        <h2>Now Playing</h2>
