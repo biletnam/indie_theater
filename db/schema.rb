@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20130610155248) do
 
   create_table "movies", :force => true do |t|
     t.string   "title"
+    t.text     "description"
     t.string   "rating"
     t.datetime "opening_date"
     t.string   "starring"
@@ -23,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20130610155248) do
     t.string   "released_by"
     t.string   "genres"
     t.boolean  "three_d"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end
