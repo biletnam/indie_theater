@@ -1,12 +1,269 @@
 <html>
 	<head>
 		<title>Indie Theater</title>
+		
+		<style>
+		/* --- RESET --- */
+		
+		html, body, header, footer, section, article, div,
+		strong, a, img, p, h1, h2, h3, time, ul, li, small {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		
+		/* --- ELEMENTS --- */
+		
+		body {
+			font-family: sans-serif;
+			background: #34495e;
+			color: #333;
+			font-size: 16px;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #00f;
+		}
+		
+		strong {
+			font-weight: bold;
+		}
+		
+		img {
+			display: block;
+		}
+		
+		/* --- CLEARFIX --- */
+		
+		.group:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		/* --- HEADER --- */
+		
+		.header {
+			background: #8e44ad;
+		}
+		
+		.header-wrap {
+			margin: auto;
+			width: 900px;
+			border-left: 1px solid #34495e;
+			border-right: 1px solid #34495e;
+		}
+		
+		.header-logo {
+			float: left;
+		}
+		
+		.header-logo > a {
+			display: block;
+			font-weight: bold;
+			padding: 10px 20px;
+			color: #ecf0f1;
+		}
+		
+		.header-nav {
+			float: right;
+		}
+		
+		.header-nav > ul > li {
+			float: left;
+			border-left: 1px solid #eee;
+		}
+		
+		.header-nav > ul > li > a {
+			display: block;
+			padding: 10px 20px;
+			color: #ecf0f1;
+			font-size: 14px;
+		}
+		
+		/* --- CONTENT --- */
+
+		.content {
+			background: #fff;
+			width: 860px;
+			padding: 20px;
+			margin: auto;
+		}
+
+		.content-sidebar {
+			float: left;
+			width: 200px;
+		}
+
+		.content-main {
+			float: right;
+			width: 620px;
+			padding: 0 10px 0 10px;
+			border-left: 1px solid #ccc;
+		}
+
+		.content-header {
+  
+		}
+
+		.content-header > h1 {
+			font-size: 48px;
+			font-weight: bold;
+			text-align: right;
+		}
+
+		/* --- SIDEBAR --- */
+
+		.profile-picture {
+			width: 200px;
+			height: 200px;
+		}
+
+		.profile-picture > a {
+			display: block;
+			position: relative;
+		}
+
+		.profile-picture > a > .online {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: bold;
+			color: #fff;
+			background: #0c6;
+			padding: 5px 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 3px;
+		}
+
+		.profile-picture > a > img {
+			width: 200px;
+			height: 200px;
+		}
+
+		.profile-info {
+			margin: 20px 0;
+		}
+
+		.profile-info h2 {
+			margin: 0 0 10px 0;
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.profile-info p {
+  
+		}
+
+		.profile-nav {
+		}
+
+		.profile-nav > ul {
+			border-bottom: 1px solid #ccc;
+		}
+
+		.profile-nav > ul > li {
+			border-top: 1px solid #ccc;
+		}
+
+		.profile-nav > ul > li > a {
+			display: block;
+			padding: 5px;
+			font-weight: bold;
+		}
+
+		/* --- POSTS --- */
+
+		.posts {
+			margin: 20px 0;
+		}
+
+		.post {
+			border-top: 1px solid #ccc;
+			padding: 20px 0;
+		}
+
+		.post > header {
+		}
+
+		.post-thumb {
+			float: left;
+			width: 60px;
+			height: 60px;
+		}
+
+		.post-thumb > a {
+			display: block;
+			border: 3px solid #00f;
+		}
+
+		.post-thumb > a > img {
+			width: 54px;
+			height: 54px;
+		}
+
+		.post-info {
+			float: left;
+			padding: 0 0 0 20px;
+			color: #999;
+		}
+
+		.post-info h3 {
+			font-weight: bold;
+		}
+
+		.post-text {
+			padding: 0 0 0 80px;
+		}
+
+		
+		/* --- FOOTER --- */
+		
+		.footer {
+			width: 900px;
+			margin: auto;
+			margin-bottom: 50px;
+			background: #fff;
+			color: #999;
+			border: 1px solid #ccc;
+		}
+		
+		.footer-copy {
+			padding: 15px 20px;
+			float: left;
+			font-size: 12px;
+		}
+		
+		.footer-links {
+			padding: 15px 20px;
+			float: right;
+		}
+		
+		.footer-links > ul > li {
+			float: left;
+			padding: 0 0 0 20px;
+		}
+		
+		.footer a {
+			color: #999;
+			font-size: 12px;
+		}
+		</style>
 	</head>
 
 	<body>
 
 		<header class="header">
-			<div id="header-wrap group">
+			<div class="header-wrap group">
 				
 				<h1 class="header-logo">
 					<a href="#">Indie Theater</a>
@@ -16,6 +273,7 @@
 					<ul class="group">
 						<li><a href="#">Showtimes</a></li>
 						<li><a href="#">Movies</a></li>
+						<li><a href="#">Parties/ Group Rates</a></li>
 						<li><a href="#">Contact</a></li>
 						<li><a href="#">About</a></li>
 					</ul>
@@ -23,6 +281,66 @@
 				
 			</div>
 		</header>
+		
+	  <div class="content group">
+	    <section class="content-sidebar">
+      
+	      <div class="profile-picture">
+	        <a href="#">
+	          <img src="logo_example.png" width="200" height="200" alt="">
+	        </a>
+	      </div>
+      
+	      <div class="profile-info">
+	        <h2>Indie Theater</h2>
+	        <p>
+	          0 Infinite Loop<br>
+						Brooklyn, NY 11111<br>
+	          <strong>Phone</strong> (555) 555-5555
+	        </p>
+	      </div>
+      
+	      <!-- <nav class="profile-nav">
+	        <ul>
+	          <li><a href="#">Wall</a></li>
+	          <li><a href="#">About</a></li>
+	          <li><a href="#">Friends</a></li>
+	          <li><a href="#">Photos</a></li>
+	        </ul>
+	      </nav> -->
+      
+	    </section>
+	    <section class="content-main">
+      
+	      <header class="content-header">
+	        <h1>Film. Experienced.</h1>
+	      </header>
+      
+	      <div class="posts">
+        	<img src="now_you_see_me.jpg" width="640" height="480">
+        
+	      </div>
+      
+	    </section>
+	  </div>
 
+		
+		<footer class="footer group">
+			
+			<small class="footer-copy">
+				&copy; 2013 Indie Theater. All rights reserved.
+			</small>
+				
+			<nav class="footer-links">
+				<ul class="group">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Social Media</a></li>
+				</ul>
+			</nav>
+			
+		</footer>	
+	
 	</body>
 </html>

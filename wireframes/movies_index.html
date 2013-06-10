@@ -1,0 +1,469 @@
+<html>
+	<head>
+		<title>Indie Theater</title>
+		
+		<style>
+		/* --- RESET --- */
+		
+		html, body, header, footer, section, article, div,
+		strong, a, img, p, h1, h2, h3, time, ul, li, small {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		
+		/* --- ELEMENTS --- */
+		
+		body {
+			font-family: sans-serif;
+			background: #34495e;
+			color: #333;
+			font-size: 16px;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #00f;
+		}
+		
+		strong {
+			font-weight: bold;
+		}
+		
+		img {
+			display: block;
+		}
+		
+		/* --- CLEARFIX --- */
+		
+		.group:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		
+		/* --- HEADER --- */
+		
+		.header {
+			background: #8e44ad;
+		}
+		
+		.header-wrap {
+			margin: auto;
+			width: 900px;
+			border-left: 1px solid #34495e;
+			border-right: 1px solid #34495e;
+		}
+		
+		.header-logo {
+			float: left;
+		}
+		
+		.header-logo > a {
+			display: block;
+			font-weight: bold;
+			padding: 10px 20px;
+			color: #ecf0f1;
+		}
+		
+		.header-nav {
+			float: right;
+		}
+		
+		.header-nav > ul > li {
+			float: left;
+			border-left: 1px solid #eee;
+		}
+		
+		.header-nav > ul > li > a {
+			display: block;
+			padding: 10px 20px;
+			color: #ecf0f1;
+			font-size: 14px;
+		}
+		
+		/* --- CONTENT --- */
+
+		.content {
+			background: #fff;
+			width: 860px;
+			padding: 20px;
+			margin: auto;
+		}
+
+		.content-sidebar {
+			float: left;
+			width: 200px;
+		}
+
+		.content-main {
+			float: right;
+			width: 620px;
+			padding: 0 10px 0 10px;
+			border-left: 1px solid #ccc;
+		}
+
+		.content-header {
+  
+		}
+
+		.content-header > h1 {
+			font-size: 48px;
+			font-weight: bold;
+			text-align: right;
+		}
+
+		/* --- SIDEBAR --- */
+
+		.profile-picture {
+			width: 200px;
+			height: 200px;
+		}
+
+		.profile-picture > a {
+			display: block;
+			position: relative;
+		}
+
+		.profile-picture > a > .online {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: bold;
+			color: #fff;
+			background: #0c6;
+			padding: 5px 10px;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 3px;
+		}
+
+		.profile-picture > a > img {
+			width: 200px;
+			height: 200px;
+		}
+
+		.profile-info {
+			margin: 20px 0;
+		}
+
+		.profile-info h2 {
+			margin: 0 0 10px 0;
+			font-weight: bold;
+			font-size: 24px;
+		}
+
+		.profile-info p {
+  
+		}
+
+		.profile-nav {
+		}
+
+		.profile-nav > ul {
+			border-bottom: 1px solid #ccc;
+		}
+
+		.profile-nav > ul > li {
+			border-top: 1px solid #ccc;
+		}
+
+		.profile-nav > ul > li > a {
+			display: block;
+			padding: 5px;
+			font-weight: bold;
+		}
+
+		/* --- POSTS --- */
+
+		.posts {
+			margin: 20px 0;
+		}
+
+		.post {
+			border-top: 1px solid #ccc;
+			padding: 20px 0;
+		}
+
+		.post > header {
+		}
+
+		.post-thumb {
+			float: left;
+			width: 80px;
+			height: 120px;
+		}
+
+		.post-thumb > a {
+			display: block;
+			border: 1px solid #999;
+		}
+
+		.post-thumb > a > img {
+			width: 78px;
+			height: 118px;
+		}
+
+		.post-info {
+			float: left;
+			padding: 0 0 0 20px;
+		}
+
+		.post-info h3 {
+			font-weight: bold;
+			padding: 0 0 10px 0;
+		}
+		
+		/* --- FOOTER --- */
+		
+		.footer {
+			width: 900px;
+			margin: auto;
+			margin-bottom: 50px;
+			background: #fff;
+			color: #999;
+			border: 1px solid #ccc;
+		}
+		
+		.footer-copy {
+			padding: 15px 20px;
+			float: left;
+			font-size: 12px;
+		}
+		
+		.footer-links {
+			padding: 15px 20px;
+			float: right;
+		}
+		
+		.footer-links > ul > li {
+			float: left;
+			padding: 0 0 0 20px;
+		}
+		
+		.footer a {
+			color: #999;
+			font-size: 12px;
+		}
+		
+		/* --- LEFT/RIGHT COLUMNS --- */
+
+		.content-left {
+			float: left;
+			width: 420px;
+		}
+
+		.content-right {
+			float: right;
+			width: 420px;
+		}
+
+		.content-header {
+  
+		}
+
+		.content-header > h2 {
+			font-size: 30px;
+			font-weight: bold;
+			text-align: left;
+		}
+		</style>
+		
+		
+	</head>
+
+	<body>
+
+		<header class="header">
+			<div class="header-wrap group">
+				
+				<h1 class="header-logo">
+					<a href="#">Indie Theater</a>
+				</h1>
+				
+				<nav class="header-nav">
+					<ul class="group">
+						<li><a href="#">Showtimes</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">Parties/ Group Rates</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</nav>
+				
+			</div>
+		</header>
+		
+	  <div class="content group">
+	    <section class="content-left">
+      
+	      <header class="content-header">
+	        <h2>Now Playing</h2>
+	      </header>
+      
+	      <div class="posts">
+        	
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="the_internship.jpg" width="50" height="50" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">The Internship</a></h3>
+	              <p>
+									<strong>Runtime:</strong> 119 mins.<br>
+									<strong>Director:</strong> Shawn Levy<br>
+									<strong>Genres:</strong> Comedy<br>
+									<strong>Starring:</strong> Vince Vaughn, Owen Wilson
+								</p>
+	            </div>
+        
+	          </header>
+	        </article>
+        
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="picture.jpg" width="46" height="46" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">Jeanne Hebuterne</a></h3>
+	              <time>3 hours ago</time>
+	            </div>
+        
+	          </header>
+	          <div class="post-text">
+        
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+	          </div>
+	        </article>
+        
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="picture.jpg" width="46" height="46" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">Jeanne Hebuterne</a></h3>
+	              <time>3 hours ago</time>
+	            </div>
+        
+	          </header>
+	          <div class="post-text">
+        
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+	          </div>
+	        </article>
+					
+	      </div>
+
+      
+	    </section>
+	    <section class="content-right">
+      
+	      <header class="content-header">
+	        <h2>Coming Soon</h2>
+	      </header>
+      
+	      <div class="posts">
+        	
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="picture.jpg" width="50" height="50" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">Jeanne Hebuterne</a></h3>
+	              <time>3 hours ago</time>
+	            </div>
+        
+	          </header>
+	          <div class="post-text">
+        
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+	          </div>
+	        </article>
+        
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="picture.jpg" width="46" height="46" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">Jeanne Hebuterne</a></h3>
+	              <time>3 hours ago</time>
+	            </div>
+        
+	          </header>
+	          <div class="post-text">
+        
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+	          </div>
+	        </article>
+        
+	        <article class="post">
+	          <header class="group">
+        
+	            <div class="post-thumb">
+	              <a href="#"><img src="picture.jpg" width="46" height="46" alt=""></a>
+	            </div>
+        
+	            <div class="post-info">
+	              <h3><a href="#">Jeanne Hebuterne</a></h3>
+	              <time>3 hours ago</time>
+	            </div>
+        
+	          </header>
+	          <div class="post-text">
+        
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+	          </div>
+	        </article>
+					
+	      </div>
+      
+	    </section>
+	  </div>
+
+		
+		<footer class="footer group">
+			
+			<small class="footer-copy">
+				&copy; 2013 Indie Theater. All rights reserved.
+			</small>
+				
+			<nav class="footer-links">
+				<ul class="group">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Social Media</a></li>
+				</ul>
+			</nav>
+			
+		</footer>	
+	
+	</body>
+</html>
