@@ -6,7 +6,30 @@
     </header>
   
     <div class="posts">
-
+			
+			<% @movies.each do |m| %>
+      
+			<article class="post">
+        <header class="group">
+    
+          <div class="post-thumb">
+            <a href="#"><%= image_tag "the_internship_poster.jpg" %></a>
+          </div>
+    
+          <div class="post-info">
+            <h3><a href="#">The Internship (PG-13)</a></h3>
+            <p>
+							<strong>Runtime:</strong> <%= "#{m.runtime} mins." %><br>
+							<strong>Director:</strong> <%= m.director %><br>
+							<strong>Genres:</strong> <%= m.genres %><br>
+							<strong>Starring:</strong> <%= m.starring %>
+						</p>
+          </div>
+    
+        </header>
+      </article>
+			
+			<% end %>
       <article class="post">
         <header class="group">
     
