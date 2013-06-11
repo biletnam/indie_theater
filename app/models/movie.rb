@@ -1,7 +1,7 @@
 class Movie < ActiveRecord::Base
   attr_accessible :title, :description, :opening_date, :starring, :director, 
                   :runtime, :released_by, :three_d, :online, :poster, :trailer,
-                  :rating_id
+                  :rating_id, :genre_ids
                   
   belongs_to :rating
   has_many :movie_genres

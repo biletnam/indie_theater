@@ -27,8 +27,20 @@
 	<div><%= f.label :released_by %>
 	<%= f.text_field :released_by %></div>
 	
-	<div><%= f.label :genres %>
-	<%= f.text_field :genres %></div>
+	<div>  
+		<% Genre.all.each do |genre| %>
+		<label>
+      
+      <input 
+        type="checkbox" 
+        name="movie[genre_ids][]" 
+        value="<%= genre.id %>" 
+        <%= "checked" if @movie.genres.include?(genre) %>>
+      
+      <%= genre.name %>  
+    </label> 
+		<% end %>
+	</div>
 	
 	<div> 3D? <%= f.label :three_d, "False", :value => false %>
 	<%= f.radio_button :three_d, false %>
