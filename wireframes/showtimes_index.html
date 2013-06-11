@@ -58,8 +58,8 @@
 		.header-wrap {
 			margin: auto;
 			width: 900px;
-			border-left: 1px solid #34495e;
-			border-right: 1px solid #34495e;
+			border-left: 1px solid #ccc;
+			border-right: 1px solid #ccc;
 		}
 		
 		.header-logo {
@@ -197,34 +197,38 @@
 
 		.post-thumb {
 			float: left;
-			width: 60px;
-			height: 60px;
+			width: 80px;
+			height: 120px;
 		}
 
 		.post-thumb > a {
 			display: block;
-			border: 3px solid #00f;
+			border: 1px solid #999;
 		}
 
 		.post-thumb > a > img {
-			width: 54px;
-			height: 54px;
+			width: 78px;
+			height: 118px;
 		}
 
 		.post-info {
 			float: left;
 			padding: 0 0 0 20px;
-			color: #999;
 		}
 
 		.post-info h3 {
 			font-weight: bold;
+			padding: 0 0 10px 0;
 		}
-
-		.post-text {
-			padding: 0 0 0 80px;
+		
+		.post-info a {
+			color: #34495e;
 		}
-
+		
+		.post-showtime {
+			float: right;
+			width: 40px;
+		}
 		
 		/* --- FOOTER --- */
 		
@@ -257,6 +261,76 @@
 			color: #999;
 			font-size: 12px;
 		}
+		
+		/* --- LEFT/RIGHT COLUMNS --- */
+
+		.content-left {
+			float: left;
+			width: 420px;
+		}
+
+		.content-right {
+			float: right;
+			width: 420px;
+		}
+
+		.content-header {
+		}
+
+		.content-header > h2 {
+			font-size: 30px;
+			font-weight: bold;
+			text-align: left;
+		}
+
+	/* --- MOVIE INFO --- */	
+	
+	.content-movie {
+		margin: auto;
+		width: 800px;
+	}
+		
+	.movie-title {
+		float: left;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	
+	.release-date {
+		float: right;
+		font-size: 14px;
+	}
+	
+	.movie-poster {
+		float: left;
+		width: 200px;
+		height: 300px;
+		padding: 0 0 0 20px; 
+	}
+	
+	.movie-poster > a {
+		display: block;
+		border: 1px solid #999;
+	}
+	
+	.movie-poster > a > img {
+		width: 198px;
+		height: 298px;
+	}
+	
+	.movie-text {
+		float: right;
+		width: 550px;
+	}
+	
+	.trailer {
+		margin: 10px 0 0 0;
+		background-color: #27ae60;
+		color: #ecf0f1;
+		border-radius: 7px;
+		border: 0;
+		cursor: pointer;
+	}
 		</style>
 	</head>
 
@@ -301,15 +375,82 @@
 	      </div>
       
 	    </section>
-	    <section class="content-main">
+	    
+			<section class="content-main">
       
 	      <header class="content-header">
-	        <h1>Film. Experienced.</h1>
+	        <h1>Showtimes</h1>
 	      </header>
-      
-	      <div class="posts">
-        	<img src="now_you_see_me.jpg" width="640" height="480">
+				        	
+		      <div class="posts">
+        	
+		        <article class="post">
+		          <header class="group">
         
+		            <div class="post-info">
+		              <p>
+									  <label for="unittype">Choose Date:</label>
+									  <select id="unittype" name="unittype">
+									   <option value="1" selected> Tuesday: June 11, 2013 </option>
+									   <option value="2"> Wednesday: June 12, 2013 </option>
+									   <option value="3"> Thursday: June 13, 2013 </option>
+									   <option value="4"> Friday: June 14, 2013 </option>
+									   <option value="5"> Saturday: June 15, 2013 </option>
+									  </select>
+									</p>
+		            </div>
+        
+		          </header>
+		        </article>
+		        
+						<article class="post">
+		          <header class="group">
+        
+		            <div class="post-thumb">
+		              <a href="#"><img src="the_internship_poster.jpg" width="50" height="50" alt=""></a>
+		            </div>
+        
+		            <div class="post-info">
+		              <h3><a href="#">The Internship (PG-13)</a></h3>
+		              <p>
+										<strong>Runtime:</strong> 119 mins.<br>
+										<strong>Director:</strong> Shawn Levy<br>
+										<strong>Genres:</strong> Comedy<br>
+										<strong>Starring:</strong> Vince Vaughn, Owen Wilson<br>
+									</p>
+		            </div>
+								
+								<div class="post-showtimes">
+									12:00 PM, 2:40 PM, 5:20 PM, 8:00 PM, 10:40 PM
+        				</div>
+		          
+							</header>
+		        </article>
+        
+		        <article class="post">
+		          <header class="group">
+        
+		            <div class="post-thumb">
+		              <a href="#"><img src="now_you_see_me_poster.jpg" width="50" height="50" alt=""></a>
+		            </div>
+        
+		            <div class="post-info">
+		              <h3><a href="#">Now You See Me (PG-13)</a></h3>
+		              <p>
+										<strong>Runtime:</strong> 116 mins.<br>
+										<strong>Director:</strong> Louis Leterrier<br>
+										<strong>Genres:</strong> Suspense/Thriller<br>
+										<strong>Starring:</strong> Mark Ruffalo, Jesse Eisenberg
+									</p>
+		            </div>
+								
+								<div class="post-showtimes">
+									12:00 PM, 2:40 PM, 5:20 PM, 8:00 PM, 10:40 PM
+								</div>
+        
+		          </header>
+		        </article>
+					
 	      </div>
       
 	    </section>

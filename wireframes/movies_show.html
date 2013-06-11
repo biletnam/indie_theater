@@ -296,35 +296,43 @@
 		font-size: 14px;
 	}
 	
+	.movie-media {
+		width: 799px;
+		height: 300px;
+		padding: 0;
+		border: 1px solid #999;
+		margin: 0 0 50px 0; 
+	}
+	
 	.movie-poster {
 		float: left;
 		width: 200px;
 		height: 300px;
-		padding: 0 0 0 20px; 
-	}
-	
-	.movie-poster > a {
-		display: block;
+		background: #333;
 		border: 1px solid #999;
 	}
 	
-	.movie-poster > a > img {
-		width: 198px;
-		height: 298px;
+	.movie-poster img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	
+	.movie-trailer {
+		float: left;
+		width: 596px;
+		border: 1px solid #999;
+		border-left: 0;
+	}
+	
+	.movie-trailer iframe {
+		width: 100%;
+		height: 300px;
 	}
 	
 	.movie-text {
-		float: right;
 		width: 550px;
-	}
-	
-	.trailer {
-		margin: 10px 0 0 0;
-		background-color: #27ae60;
-		color: #ecf0f1;
-		border-radius: 7px;
-		border: 0;
-		cursor: pointer;
+		padding: 0 0 0 20px;
 	}
 		</style>
 	</head>
@@ -362,23 +370,26 @@
         <article class="post">
           <header class="group">
       
-            <div class="movie-poster">
-              <a href="#"><img src="now_you_see_me_poster.jpg" alt=""></a>
-            </div>
-      
+            <div class="movie-media group">
+							<div class="movie-poster">
+								<a href="#"><img src="now_you_see_me_poster.jpg" alt=""></a>
+							</div>
+
+							<div class="movie-trailer">					
+								<iframe width="560" height="315" src="http://www.youtube.com/embed/8MHDYZJWLXA?rel=0" frameborder="0"></iframe>
+							</div>
+						</div>
+													
             <div class="movie-text">
               <p>
-								During their performances, the world's greatest illusionists known as "The Four Horsemen" pull off a series of daring heists against corrupt business leaders. The super-team of illusionists shower the stolen profits on their audiences while staying one step ahead of an elite FBI squad in a game of cat and mouse. 
-							<br>
+								During their performances, the world's greatest illusionists known as "The Four Horsemen" pull off a series of daring heists against corrupt business leaders. The super-team of illusionists shower the stolen profits on their audiences while staying one step ahead of an elite FBI squad in a game of cat and mouse.<br>
 							<br>
 								<strong>Starring:</strong> Mark Ruffalo, Jesse Eisenberg<br>
 								<strong>Director:</strong> Louis Leterrier<br>
 								<strong>Runtime:</strong> 116 mins.<br>
 								<strong>Released By:</strong> Lionsgate Films
 							</p>
-							
-							<button class="trailer">Trailer</button>
-            </div>
+						 </div>
       
           </header>
         </article>

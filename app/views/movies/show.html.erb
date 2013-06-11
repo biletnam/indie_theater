@@ -9,10 +9,16 @@
 		
     <article class="post">
       <header class="group">
-  
-        <div class="movie-poster">
-          <%= link_to (image_tag @movie.poster.url(:medium)), movie_url(@movie) %>
-        </div>
+				
+        <div class="movie-media group">
+					<div class="movie-poster">
+						<%= link_to (image_tag @movie.poster.url(:medium)), movie_url(@movie) %>
+					</div>
+
+					<div class="movie-trailer">					
+						<iframe width="560" height="315" src="<%= @movie.trailer %>" frameborder="0"></iframe>
+					</div>
+				</div>
   
         <div class="movie-text">
           <p>
@@ -24,9 +30,6 @@
 						<strong>Runtime:</strong> <%= "#{@movie.runtime} mins." %><br>
 						<strong>Released By:</strong> <%= @movie.released_by %>
 					</p>
-					
-					<!-- <button class="trailer">Trailer</button> -->
-					<%= link_to "Trailer", @movie.trailer, :target => "blank"%>
         </div>
   
       </header>

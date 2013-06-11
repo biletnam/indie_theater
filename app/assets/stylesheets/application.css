@@ -290,53 +290,58 @@
 		font-weight: bold;
 		text-align: left;
 	}
-
-/* --- MOVIE INFO --- */	
-
-.content-movie {
-	margin: auto;
-	width: 800px;
-}
 	
-.movie-title {
-	float: left;
-	font-weight: bold;
-	font-size: 20px;
-}
-
-.release-date {
-	float: right;
-	font-size: 14px;
-}
-
-.movie-poster {
-	float: left;
-	width: 200px;
-	height: 300px;
-	padding: 0 0 0 20px; 
-}
-
-.movie-poster > a {
-	display: block;
-	border: 1px solid #999;
-}
-
-.movie-poster > a > img {
-	width: 198px;
-	height: 298px;
-}
-
-.movie-text {
-	float: right;
-	width: 550px;
-}
-
-/*.movie-text > a {
-	margin-top: 10px;
-	padding: 3px;
-	background-color: #27ae60;
-	color: #ecf0f1;
-	border-radius: 8px;
-	border: 0;
-	cursor: pointer;
-}*/
+	/* --- MOVIE INFO --- */	
+	
+	.content-movie {
+		margin: auto;
+		width: 800px;
+	}
+		
+	.movie-title {
+		float: left;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	
+	.release-date {
+		float: right;
+		font-size: 14px;
+	}
+	
+	.movie-media {
+		width: 798px;
+		height: 300px;
+		padding: 0;
+		border: 1px solid #999;
+		margin: 0 0 50px 0; 
+	}
+	
+	.movie-poster {
+		float: left;
+		width: 200px;
+		height: 299px;
+		background: #333;
+		border: 1px solid #999;
+	}
+	
+	.movie-poster img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	
+	.movie-trailer {
+		float: left;
+		width: 596px;
+	}
+	
+	.movie-trailer iframe {
+		width: 100%;
+		height: 300px;
+	}
+	
+	.movie-text {
+		width: 550px;
+		padding: 0 0 0 20px;
+	}
