@@ -323,14 +323,13 @@
 		width: 550px;
 	}
 	
-	.trailer {
-		margin: 10px 0 0 0;
-		background-color: #27ae60;
-		color: #ecf0f1;
-		border-radius: 7px;
-		border: 0;
-		cursor: pointer;
+	/* -- SHOWTIMES -- */	
+	
+	.post-info > ul > li {
+		float: left;
+		padding: 0 10px 0 0;
 	}
+	
 		</style>
 	</head>
 
@@ -388,16 +387,15 @@
 		          <header class="group">
         
 		            <div class="post-info">
-		              <p>
-									  <label for="unittype">Choose Date:</label>
-									  <select id="unittype" name="unittype">
-									   <option value="1" selected> Tuesday: June 11, 2013 </option>
-									   <option value="2"> Wednesday: June 12, 2013 </option>
-									   <option value="3"> Thursday: June 13, 2013 </option>
-									   <option value="4"> Friday: June 14, 2013 </option>
-									   <option value="5"> Saturday: June 15, 2013 </option>
-									  </select>
-									</p>
+		              <ul>
+										<li><a href="#">Today</a></li>
+										<li><a href="#">Tomorrow</a></li>
+										<li><a href="#">Sunday</a></li>
+										<li><a href="#">Monday</a></li>
+										<li><a href="#">Tuesday</a></li>
+										<li><a href="#">Wednesday</a></li>
+										<li><a href="#">Thursday</a></li>
+									</ul>
 		            </div>
         
 		          </header>
@@ -419,10 +417,6 @@
 										<strong>Starring:</strong> Vince Vaughn, Owen Wilson<br>
 									</p>
 		            </div>
-								
-								<div class="post-showtimes">
-									12:00 PM, 2:40 PM, 5:20 PM, 8:00 PM, 10:40 PM
-        				</div>
 		          
 							</header>
 		        </article>
@@ -443,10 +437,6 @@
 										<strong>Starring:</strong> Mark Ruffalo, Jesse Eisenberg
 									</p>
 		            </div>
-								
-								<div class="post-showtimes">
-									12:00 PM, 2:40 PM, 5:20 PM, 8:00 PM, 10:40 PM
-								</div>
         
 		          </header>
 		        </article>
