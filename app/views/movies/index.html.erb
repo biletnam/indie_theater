@@ -7,7 +7,7 @@
   
     <div class="posts">
 			
-			<% @movies.each do |m| %>
+			<% @now_playing.each do |n| %>
       
 			<article class="post">
         <header class="group">
@@ -17,12 +17,12 @@
           </div>
     
           <div class="post-info">
-            <h3><a href="#">The Internship (PG-13)</a></h3>
+            <h3><a href="#"><%= "#{n.title} #{n.rating}"%></a></h3>
             <p>
-							<strong>Runtime:</strong> <%= "#{m.runtime} mins." %><br>
-							<strong>Director:</strong> <%= m.director %><br>
-							<strong>Genres:</strong> <%= m.genres %><br>
-							<strong>Starring:</strong> <%= m.starring %>
+							<strong>Runtime:</strong> <%= "#{n.runtime} mins." %><br>
+							<strong>Director:</strong> <%= n.director %><br>
+							<strong>Genres:</strong> <%= n.genres %><br>
+							<strong>Starring:</strong> <%= n.starring %>
 						</p>
           </div>
     
@@ -30,92 +30,10 @@
       </article>
 			
 			<% end %>
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="the_internship_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">The Internship (PG-13)</a></h3>
-            <p>
-							<strong>Runtime:</strong> 119 mins.<br>
-							<strong>Director:</strong> Shawn Levy<br>
-							<strong>Genres:</strong> Comedy<br>
-							<strong>Starring:</strong> Vince Vaughn, Owen Wilson
-						</p>
-          </div>
-    
-        </header>
-      </article>
     	
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="the_internship_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">The Internship (PG-13)</a></h3>
-            <p>
-							<strong>Runtime:</strong> 119 mins.<br>
-							<strong>Director:</strong> Shawn Levy<br>
-							<strong>Genres:</strong> Comedy<br>
-							<strong>Starring:</strong> Vince Vaughn, Owen Wilson
-						</p>
-          </div>
-    
-        </header>
-      </article>
-    
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="now_you_see_me_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">Now You See Me (PG-13)</a></h3>
-            <p>
-							<strong>Runtime:</strong> 116 mins.<br>
-							<strong>Director:</strong> Louis Leterrier<br>
-							<strong>Genres:</strong> Suspense/Thriller<br>
-							<strong>Starring:</strong> Mark Ruffalo, Jesse Eisenberg
-						</p>
-          </div>
-    
-        </header>
-      </article>
-     
-    
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="epic_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">EPIC (PG)</a></h3>
-            <p>
-							<strong>Runtime:</strong> 102 mins.<br>
-							<strong>Director:</strong> Chris Wedge<br>
-							<strong>Genres:</strong> Animation, Family<br>
-							<strong>Starring:</strong> Beyonce Knowles, Colin Farrell
-						</p>
-          </div>
-    
-        </header>
-      </article>
-      
-			
     </div>
-
-  
   </section>
+	
   <section class="content-right">
   
     <header class="content-header">
@@ -124,70 +42,30 @@
   
     <div class="posts">
     	
+			<% @coming_soon.each do |c| %>
+			
       <article class="post">
         <header class="group">
     
           <div class="post-thumb">
-            <a href="#"><img src="this_is_the_end_poster.jpg" width="50" height="50" alt=""></a>
+            <a href="#"><%= image_tag "the_internship_poster.jpg" %></a>
           </div>
     
           <div class="post-info">
-            <h3><a href="#">This is the End</a></h3>
+            <h3><a href="#"><%= c.title %> <%= "3D" if c.three_d %></a></h3>
             <p>
-							<time>Opens Tuesday, June 11</time><br>
-							<strong>Runtime:</strong> 107 mins.<br>
-							<strong>Director:</strong>  Seth Rogen, Evan Goldberg<br>
-							<strong>Genres:</strong> Comedy<br>
-							<strong>Starring:</strong> James Franco, Jonah Hill
+							<time>Opens <%= "#{c.opening_date.to_date}" %></time><br>
+							<strong>Runtime:</strong> <%= "#{c.runtime} mins." %><br>
+							<strong>Director:</strong>  <%= "#{c.director}" %><br>
+							<strong>Genres:</strong> <%= "#{c.genres}" %><br>
+							<strong>Starring:</strong> <%= "#{c.starring}" %>
 						</p>
           </div>
     
         </header>
       </article>
-    
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="man_of_steel_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">Man of Steel 3D</a></h3>
-            <p>
-							<time>Opens Friday, June 14</time><br>
-							<strong>Runtime:</strong> 143 mins.<br>
-							<strong>Director:</strong> Zack Snyder<br>
-							<strong>Genres:</strong> Action/Adventure, SciFi/Fantasy<br>
-							<strong>Starring:</strong> Henry Cavill, Diane Lane
-						</p>
-          </div>
-    
-        </header>
-      </article>
-     
-    
-      <article class="post">
-        <header class="group">
-    
-          <div class="post-thumb">
-            <a href="#"><img src="world_war_z_poster.jpg" width="50" height="50" alt=""></a>
-          </div>
-    
-          <div class="post-info">
-            <h3><a href="#">World War Z 3D</a></h3>
-            <p>
-							<time>Opens Thursday, June 20</time><br>
-							<strong>Runtime:</strong> 116 mins.<br>
-							<strong>Director:</strong> Marc Forster<br>
-							<strong>Genres:</strong> Action/Adventure<br>
-							<strong>Starring:</strong> Brad Pitt, James Badge Dale
-						</p>
-          </div>
-    
-        </header>
-      </article>
-      
+			
+			<% end %>
 			
     </div>
   
