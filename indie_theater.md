@@ -78,17 +78,22 @@ Showtimes
 
 Views
 ==
-Homepage (Carousel of posters)
 Movies Index
 Movies Show
-Showtimes Index (sort by date)
 
 Tuesday
 ===
-Admin access: add movies, showtimes
+Movies
+Showtimes
+
+Views
+==
+Showtimes Index (sort by date)
+Homepage (Carousel of posters)
 
 Wednesday
 ===
+Admin access: add movies, showtimes
 Customer
 Ticket
 
