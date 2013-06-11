@@ -5,6 +5,33 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+genres = Genre.create([{name: "Action"},
+                       {name: "Adventure"},
+                       {name: "Animation"},
+                       {name: "Biography"},
+                       {name: "Comedy"},
+                       {name: "Crime"},
+                       {name: "Documentary"},
+                       {name: "Drama"},
+                       {name: "Family"},
+                       {name: "Fantasy"},
+                       {name: "Film-Noir"},
+                       {name: "Game-Show"},
+                       {name: "History"},
+                       {name: "Horror"},
+                       {name: "Music"},
+                       {name: "Musical"},
+                       {name: "Mystery"},
+                       {name: "News"},
+                       {name: "Reality-TV"},
+                       {name: "Romance"},
+                       {name: "Sci-Fi"},
+                       {name: "Sport"},
+                       {name: "Talk-Show"},
+                       {name: "Thriller"},
+                       {name: "War"},
+                       {name: "Western"}])
+
 ratings = Rating.create([{value: "G"}, 
                          {value: "PG"},
                          {value: "PG-13"},
