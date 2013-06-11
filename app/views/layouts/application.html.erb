@@ -12,13 +12,13 @@
 		<div class="header-wrap group">
 			
 			<h1 class="header-logo">
-				<a href="#">Indie Theater</a>
+				<%= link_to "Indie Theater", root_url %>
 			</h1>
 			
 			<nav class="header-nav">
 				<ul class="group">
 					<li><a href="#">Showtimes</a></li>
-					<li><a href="#">Movies</a></li>
+					<li><%= link_to "Movies", movies_url %>
 					<li><a href="#">Parties/ Group Rates</a></li>
 					<li><a href="#">Contact</a></li>
 					<li><a href="#">About</a></li>
@@ -38,7 +38,7 @@
 		
 	<nav class="footer-links">
 		<ul class="group">
-			<li><a href="#">Home</a></li>
+			<li><%= link_to "Home", root_url %></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Contact</a></li>
 			<li><a href="#">Social Media</a></li>
