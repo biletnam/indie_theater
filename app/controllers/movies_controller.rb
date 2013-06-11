@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
   
   def new
     @movie = Movie.new
+    @movie.online = false
+    @movie.three_d = false
   end
   
   def create
