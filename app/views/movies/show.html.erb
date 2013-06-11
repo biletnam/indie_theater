@@ -2,7 +2,7 @@
   <section class="content-movie">
 		
 		<header class="vital-info group">
-			<h2 class="movie-title"><%= @movie.full_title %></h2>
+			<h2 class="movie-title"><%= "#{@movie.full_title} (#{@movie.rating})" %></h2>
 			<hp class="release-date"><strong>Release Date: </strong> <%= @movie.opening_date.to_date %></p>
 		</header>
 		
@@ -24,7 +24,8 @@
 						<strong>Released By:</strong> <%= @movie.released_by %>
 					</p>
 					
-					<button class="trailer">Trailer</button>
+					<!-- <button class="trailer">Trailer</button> -->
+					<%= link_to "Trailer", @movie.trailer %>
         </div>
   
       </header>
