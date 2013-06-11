@@ -6,4 +6,10 @@ class Movie < ActiveRecord::Base
                     :default_url => "/images/:style/missing.png"
   
   scope :online, where(:online => true)
+  
+  def full_title
+    self.title += " 3D" if self.three_d
+    
+    self.title
+  end
 end

@@ -1,0 +1,71 @@
+	<section class="content-left">
+  
+    <header class="content-header">
+      <h2>Now Playing</h2>
+    </header>
+  
+    <div class="posts">
+			
+			<% @now_playing.each do |n| %>
+      
+			<article class="post">
+        <header class="group">
+    
+          <div class="post-thumb">
+            <%= link_to (image_tag n.poster.url(:medium)), movie_url(n) %>
+          </div>
+    
+          <div class="post-info">
+            <h3><%= link_to "#{n.full_title} (#{n.rating})", movie_url(n) %></h3>
+            <p>
+							<strong>Runtime:</strong> <%= "#{n.runtime} mins." %><br>
+							<strong>Director:</strong> <%= n.director %><br>
+							<strong>Genres:</strong> <%= n.genres %><br>
+							<strong>Starring:</strong> <%= n.starring %>
+						</p>
+          </div>
+    
+        </header>
+      </article>
+			
+			<% end %>
+    	
+    </div>
+  </section>
+	
+  <section class="content-right">
+  
+    <header class="content-header">
+      <h2>Coming Soon</h2>
+    </header>
+  
+    <div class="posts">
+    	
+			<% @coming_soon.each do |c| %>
+			
+      <article class="post">
+        <header class="group">
+    
+          <div class="post-thumb">
+            <%= link_to (image_tag c.poster.url(:medium)), movie_url(c) %>
+          </div>
+    
+          <div class="post-info">
+            <h3><%= link_to c.full_title, movie_url(c) %></h3>
+            <p>
+							<time>Opens <%= "#{c.opening_date.to_date}" %></time><br>
+							<strong>Runtime:</strong> <%= "#{c.runtime} mins." %><br>
+							<strong>Director:</strong>  <%= "#{c.director}" %><br>
+							<strong>Genres:</strong> <%= "#{c.genres}" %><br>
+							<strong>Starring:</strong> <%= "#{c.starring}" %>
+						</p>
+          </div>
+    
+        </header>
+      </article>
+			
+			<% end %>
+			
+    </div>
+  
+  </section>
