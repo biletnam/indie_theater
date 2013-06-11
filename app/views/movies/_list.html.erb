@@ -20,7 +20,7 @@
             <p>
 							<strong>Runtime:</strong> <%= "#{n.runtime} mins." %><br>
 							<strong>Director:</strong> <%= n.director %><br>
-							<strong>Genres:</strong> <%= n.genres %><br>
+							<strong>Genres:</strong> <% n.genres.each do |g| %> <%= g.name %> <% end %><br>
 							<strong>Starring:</strong> <%= n.starring %>
 						</p>
           </div>
@@ -56,7 +56,7 @@
 							<time>Opens <%= "#{c.opening_date.to_date}" %></time><br>
 							<strong>Runtime:</strong> <%= "#{c.runtime} mins." %><br>
 							<strong>Director:</strong>  <%= "#{c.director}" %><br>
-							<strong>Genres:</strong> <%= "#{c.genres}" %><br>
+							<strong>Genres:</strong> <% c.genres.each do |g| %> <%= g.name %> <% end %><br>
 							<strong>Starring:</strong> <%= "#{c.starring}" %>
 						</p>
           </div>

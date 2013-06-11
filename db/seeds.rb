@@ -83,3 +83,12 @@ movies = Movie.create([{title: "The Internship",
                         three_d: true,
                         online: true,
                         trailer: "https://www.youtube.com/watch?v=HcwTxRuq-uk"}])
+                        
+movie_genres = MovieGenre.create([{movie_id: 1, genre_id: 5},
+                                  {movie_id: 2, genre_id: 24},
+                                  {movie_id: 3, genre_id: 1},
+                                  {movie_id: 3, genre_id: 2},
+                                  {movie_id: 3, genre_id: 10},
+                                  {movie_id: 3, genre_id: 21},
+                                  {movie_id: 4, genre_id: 1},
+                                  {movie_id: 4, genre_id: 2}])
