@@ -9,8 +9,8 @@
 	<div><%= f.label :description %>
 	<%= f.text_area :description %></div>
 	
-	<div><%= f.label :rating %>
-	<%= f.text_field :rating %></div>
+	<div><%= f.label :rating_id, "Rating" %>
+	<%= collection_select(:movie, :rating_id, Rating.all, :id, :value) %></div>
 	
 	<div><%= f.label :opening_date %>
 	<%= f.date_select :opening_date %></div>

@@ -16,7 +16,7 @@
           </div>
     
           <div class="post-info">
-            <h3><%= link_to "#{n.full_title} (#{n.rating})", movie_url(n) %></h3>
+            <h3><%= link_to "#{n.full_title} (#{n.rating.value})", movie_url(n) %></h3>
             <p>
 							<strong>Runtime:</strong> <%= "#{n.runtime} mins." %><br>
 							<strong>Director:</strong> <%= n.director %><br>
