@@ -1,0 +1,55 @@
+<div class="content group">
+	<h1>Add a Movie</h1>
+	
+	<%= form_for(@movie) do |f| %>
+	
+	<div><%= f.label :title %>
+	<%= f.text_field :title %></div>
+	
+	<div><%= f.label :description %>
+	<%= f.text_area :description %></div>
+	
+	<div><%= f.label :rating %>
+	<%= f.text_field :rating %></div>
+	
+	<div><%= f.label :opening_date %>
+	<%= f.date_select :opening_date %></div>
+	
+	<div><%= f.label :starring %>
+	<%= f.text_field :starring %></div>
+	
+	<div><%= f.label :director %>
+	<%= f.text_field :director %></div>
+	
+	<div><%= f.label :runtime %>
+	<%= f.text_field :runtime %></div>
+	
+	<div><%= f.label :released_by %>
+	<%= f.text_field :released_by %></div>
+	
+	<div><%= f.label :genres %>
+	<%= f.text_field :genres %></div>
+	
+	<div> 3D? <%= f.label :three_d, "False", :value => false %>
+	<%= f.radio_button :three_d, false %>
+	
+	<%= f.label :three_d, "True", :value => true %>
+	<%= f.radio_button :three_d, true %></div>
+	
+	<%= f.label :poster %>
+	<%= f.file_field :poster %>
+	
+	<div><%= f.label :trailer %>
+	<%= f.text_field :trailer %></div>	
+	
+	<div> Online? <%= f.label :online, "False", :value => false %>
+	<%= f.radio_button :online, false %>
+	
+	<%= f.label :online, "True", :value => true %>
+	<%= f.radio_button :online, true %></div>		
+	
+	<%= f.submit %>
+	
+	<% end %>
+
+</div>

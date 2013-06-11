@@ -331,11 +331,12 @@
 	width: 550px;
 }
 
-.trailer {
-	margin: 10px 0 0 0;
+/*.movie-text > a {
+	margin-top: 10px;
+	padding: 3px;
 	background-color: #27ae60;
 	color: #ecf0f1;
-	border-radius: 7px;
+	border-radius: 8px;
 	border: 0;
 	cursor: pointer;
-}
+}*/
