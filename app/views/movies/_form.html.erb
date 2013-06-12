@@ -1,7 +1,7 @@
 <div class="content group">
 	<h1>Add a Movie</h1>
 	
-	<%= form_for(@movie) do |f| %>
+	<%= nested_form_for(@movie) do |f| %>
 	
 	<div><%= f.label :title %>
 	<%= f.text_field :title %></div>
@@ -59,7 +59,13 @@
 	<%= f.radio_button :online, false %>
 	
 	<%= f.label :online, "True", :value => true %>
-	<%= f.radio_button :online, true %></div>		
+	<%= f.radio_button :online, true %></div>
+	
+	<%= f.fields_for :showtimes do |showtime_form| %>
+	  <%= showtime_form.datetime_select :time %>
+	  <%= showtime_form.link_to_remove "Remove this showtime" %>
+	<% end %>
+	<p><%= f.link_to_add "Add a showtime", :showtimes %></p>		
 	
 	<%= f.submit %>
 	
