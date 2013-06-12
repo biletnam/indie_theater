@@ -1,3 +1,29 @@
-<div class="content group">
-	<%= render "list" %>
+<div class="content group">	
+	<% if admin_signed_in? %>
+	
+	<h1>Online</h1>
+		<ul>
+		<% Movie.online.reverse.each do |movie| %>
+			
+		<li><%= movie.title %> 
+				<%= link_to "view", movie_url(movie) %>
+				<%= link_to "edit", edit_movie_url(movie) %></li>
+		
+		<% end %>
+		</ul><hr>
+	
+	<h1>Offline</h1>	
+		<ul>
+		<% Movie.offline.reverse.each do |movie| %>
+		
+		<li><%= movie.title %> 
+				<%= link_to "view", movie_url(movie) %>
+				<%= link_to "edit", edit_movie_url(movie) %></li>
+	
+		<% end %>
+	</ul>
+		
+	<% else %>
+		<%= render "list" %>
+	<% end %>
 </div>

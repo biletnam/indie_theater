@@ -15,6 +15,7 @@ class Movie < ActiveRecord::Base
   accepts_nested_attributes_for :showtimes, :allow_destroy => true
   
   scope :online, where(:online => true)
+  scope :offline, where(:online => false)
   
   def full_title
     self.title += " 3D" if self.three_d

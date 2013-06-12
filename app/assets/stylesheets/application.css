@@ -227,6 +227,7 @@
 	.post-info {
 		float: left;
 		padding: 0 0 0 20px;
+		width: 300px;
 	}
 
 	.post-info h3 {
