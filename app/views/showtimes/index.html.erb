@@ -69,7 +69,7 @@
 								<% n.showtimes.sort_by {|showtime| showtime.time }.each do |s| %>
 								
 									<% if @showtimes.include?(s) %>
-										<% if (s.time > @day) %>
+										<% if (s.time > @today) %>
 											<li><%= link_to s.time.strftime('%l:%M %p'), "#" %></li>
 										<% else %>
 											<li><%= s.time.strftime('%l:%M %p')%></li>

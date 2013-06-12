@@ -12,7 +12,7 @@ class Movie < ActiveRecord::Base
   has_attached_file :poster, :styles => { :small => "78x118", :medium => "198x298" }, 
                     :default_url => "/images/:style/missing.png"
   
-  accepts_nested_attributes_for :showtimes
+  accepts_nested_attributes_for :showtimes, :allow_destroy => true
   
   scope :online, where(:online => true)
   
