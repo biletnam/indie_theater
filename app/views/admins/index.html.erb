@@ -7,7 +7,7 @@
 		<% if admin.super %>
 			<li><%= admin.email %> <%= link_to "edit", edit_admin_url(admin) %></li>
 		<% else %>
-		<li><%= admin.email %> <%= link_to "edit", edit_admin_url(admin) %> <%= link_to "destroy", admin_url(admin), :method => "destroy" %></li>
+		<li><%= admin.email %> <%= link_to "edit", edit_admin_url(admin) %> <%= link_to "destroy", admin_url(admin), :method => "delete" %></li>
 		<% end %>
 				
 	<% end %>

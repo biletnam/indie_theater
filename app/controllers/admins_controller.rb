@@ -9,13 +9,6 @@ class AdminsController < ApplicationController
     
     @admins = Admin.all
   end
-   
-  # def show
-  #   @movie = Movie.find(params[:id])
-  #   now = Date.today.to_s
-  #   @now_playing = Movie.where("opening_date < ?", now).online
-  #   @coming_soon = Movie.where("opening_date > ?", now).online
-  # end
   
   def new
     unless current_admin.super
@@ -30,7 +23,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(params[:admin])
     @admin.super = false
     
-    if @admin.save!
+    if @admin.save
       redirect_to root_url
     else
       render :new
@@ -53,5 +46,14 @@ class AdminsController < ApplicationController
     else
       render :edit
     end
+  end
+  
+  def destroy
+    unless current_admin.super
+      redirect_to root_url
+    end
+    
+    Admin.find(params[:id]).destroy
+    redirect_to :action => 'index'
   end
 end
