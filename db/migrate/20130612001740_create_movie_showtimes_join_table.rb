@@ -1,4 +1,4 @@
-class Create movieShowtimes join table < ActiveRecord::Migration
+class CreateMovieShowtimesJoinTable < ActiveRecord::Migration
   def change
     create_table :movie_showtimes do |t|
       t.integer :movie_id
