@@ -1,0 +1,19 @@
+<div class="content group">
+	<h1>Admin Form</h1>
+	
+	<%= form_for(@admin) do |f| %>
+	
+	<div><%= f.label :email %>
+	<%= f.text_field :email %></div>
+	
+	<div><%= f.label :password %>
+	<%= f.password_field :password %></div>
+	
+	<div><%= f.label :password_confirmation %>
+	<%= f.password_field :password_confirmation %></div>
+		
+	<%= f.submit %>
+	
+	<% end %>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="content group">
+	<h1>All Admins</h1>
+	
+	<ul>
+	<% @admins.each do |admin| %>
+		
+		<% if admin.super %>
+			<li><%= admin.email %> <%= link_to "edit", edit_admin_url(admin) %></li>
+		<% else %>
+		<li><%= admin.email %> <%= link_to "edit", edit_admin_url(admin) %> <%= link_to "destroy", admin_url(admin), :method => "destroy" %></li>
+		<% end %>
+				
+	<% end %>
+	</ul>
+	
+</div>
