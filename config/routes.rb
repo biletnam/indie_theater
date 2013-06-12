@@ -5,6 +5,7 @@ IndieTheater::Application.routes.draw do
 
   resources :pages, :only => [:index]
   
+  resources :admins
   resources :movies
   resources :showtimes
 end

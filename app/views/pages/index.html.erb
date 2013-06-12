@@ -15,9 +15,9 @@
         <strong>Phone</strong> (555) 555-5555
 				<% if admin_signed_in? %>
 					<ul>
-						<li><%= link_to "Add Movie", new_movie_url %></li>
 						<li><%= link_to "Sign Out", destroy_admin_session_url, :method => "delete" %></li>
-						<%= link_to "Edit Movies", movies_url %>
+						<li><%= link_to "Add Movie", new_movie_url %></li>
+						<li><%= link_to "Edit Movies", movies_url %></li>
 					</ul>
 				<% end %>
       </p>

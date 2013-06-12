@@ -89,7 +89,9 @@ Showtimes
 Wednesday
 ===
 Showtime
-Admin access: add movies, showtimes
+Admin access: add movies, showtimes, add other admins
+Super admin can add, delete other admins
+Customer: facebook login, rate a film, share
 
 Views
 ==
@@ -98,7 +100,6 @@ Showtime Create, Update, Destroy
 
 Thursday
 ===
-Customer
 Ticket
 
 Views
