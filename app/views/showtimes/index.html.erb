@@ -32,6 +32,7 @@
             <div class="post-info">
 							<div class="week">
 	              <ul>
+									<li><%= @today %></li>
 									<li><%= link_to "Today", showtimes_url %></li>
 									<li><%= link_to "Tomorrow", showtimes_url %></li>
 									<li><%= link_to (@today + 2).strftime("%A"), showtimes_url %></li>
@@ -67,11 +68,9 @@
 					
 					<div class="showtime-list">
 							<ul>
-								<li>12:00 PM</li> 
-								<li>2:40 PM</li>
-								<li>5:20 PM</li>
-								<li><a href="#">8:00 PM</a></li>
-								<li><a href="#">10:40 PM</a></li>
+								<% @showtimes.each do |s| %>
+									<li><%= s.time.strftime('%l:%M %p') %></li>
+								<% end %>
 							</ul>									
 					</div>
         </article>
