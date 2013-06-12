@@ -93,16 +93,16 @@ movie_genres = MovieGenre.create([{movie_id: 1, genre_id: 5},
                                   {movie_id: 4, genre_id: 1},
                                   {movie_id: 4, genre_id: 2}])
                                   
-showtimes = Showtime.create([{time: "2013-06-12T12:00:00"},
-                             {time: "2013-06-12T14:40:00"},
-                             {time: "2013-06-12T15:20:00"},
-                             {time: "2013-06-12T20:00:00"},
-                             {time: "2013-06-12T22:40:00"},
-                             {time: "2013-06-13T12:00:00"},
-                             {time: "2013-06-13T14:40:00"},
-                             {time: "2013-06-13T15:20:00"},
-                             {time: "2013-06-13T20:00:00"},
-                             {time: "2013-06-13T22:40:00"}])
+showtimes = Showtime.create([{time: "2013-06-12T12:00:00-04:00"},
+                             {time: "2013-06-12T14:40:00-04:00"},
+                             {time: "2013-06-12T15:20:00-04:00"},
+                             {time: "2013-06-12T20:00:00-04:00"},
+                             {time: "2013-06-12T22:40:00-04:00"},
+                             {time: "2013-06-13T12:00:00-04:00"},
+                             {time: "2013-06-13T14:40:00-04:00"},
+                             {time: "2013-06-13T15:20:00-04:00"},
+                             {time: "2013-06-13T20:00:00-04:00"},
+                             {time: "2013-06-13T22:40:00-04:00"}])
 
 movie_showtimes = MovieShowtime.create([{movie_id: 1, showtime_id: 1},
                                         {movie_id: 1, showtime_id: 2},
