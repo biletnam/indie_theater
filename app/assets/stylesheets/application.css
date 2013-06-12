@@ -345,3 +345,20 @@
 		width: 760px;
 		padding: 0 0 0 20px;
 	}
+	
+	/* -- SHOWTIMES -- */	
+	
+	.week > ul > li {
+		float: left;
+		padding: 0 10px 0 0;
+	}
+	
+	.showtime-list {
+		width: 550px;
+		padding: 20px 0 10px 10px;
+	}
+	
+	.showtime-list li {
+		float: left;
+		padding: 0 0 0 10px;
+	}
