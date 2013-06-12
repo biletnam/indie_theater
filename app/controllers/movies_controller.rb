@@ -1,4 +1,7 @@
 class MoviesController < ApplicationController
+  
+  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update]
+  
   def index
     now = Date.today.to_s
     @now_playing = Movie.where("opening_date < ?", now).online
@@ -21,7 +24,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(params[:movie])
     
-    if @movie.save!
+    if @movie.save
       redirect_to movie_url(@movie)
     else
       render :new
