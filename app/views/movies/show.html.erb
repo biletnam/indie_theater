@@ -2,9 +2,12 @@
   <section class="content-movie">
 		
 		<header class="vital-info group">
-			<h2 class="movie-title"><%= "#{@movie.full_title} (#{@movie.rating.value})" %> 
-															<%= link_to "Edit", edit_movie_url(@movie) %></h2>
-			<hp class="release-date"><strong>Release Date: </strong> <%= @movie.opening_date.to_date %></p>
+			<h2 class="movie-title"><%= "#{@movie.full_title} (#{@movie.rating.value})" %>
+															<% if admin_signed_in? %>
+																<%= link_to "Edit", edit_movie_url(@movie) %>
+																<% end %>
+															</h2>
+			<p class="release-date"><strong>Release Date: </strong> <%= @movie.opening_date.to_date %></p>
 		</header>
 		
     <article class="post">

@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem "paperclip", "~> 3.0"
 gem 'sqlite3'
 gem "nested_form"
+gem 'devise'
 
 # Gems used only for assets and not required
 # in production environments by default.

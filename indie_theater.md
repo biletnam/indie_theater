@@ -95,12 +95,14 @@ Views
 ==
 Showtimes Index (sort by date)
 Showtime Create, Update, Destroy
-Homepage (Carousel of posters)
 
 Thursday
 ===
 Customer
 Ticket
+
+Views
+Homepage (Carousel of posters)
 
 Friday
 ===

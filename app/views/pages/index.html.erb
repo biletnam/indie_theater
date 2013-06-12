@@ -13,9 +13,12 @@
         0 Infinite Loop<br>
 				Brooklyn, NY 11111<br>
         <strong>Phone</strong> (555) 555-5555
-				<ul>
-					<li><%= link_to "Add Movie", new_movie_url %></li>
-				</ul>
+				<% if admin_signed_in? %>
+					<ul>
+						<li><%= link_to "Add Movie", new_movie_url %></li>
+						<li><%= link_to "Sign Out", destroy_admin_session_url, :method => "delete" %></li>
+					</ul>
+				<% end %>
       </p>
     </div>
 
