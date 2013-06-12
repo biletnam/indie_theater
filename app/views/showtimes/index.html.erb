@@ -32,13 +32,13 @@
             <div class="post-info">
 							<div class="week">
 	              <ul>
-									<li><a href="#">Today</a></li>
-									<li><a href="#">Tomorrow</a></li>
-									<li><a href="#"><%= (@today + 2).strftime("%A") %></a></li>
-									<li><a href="#"><%= (@today + 3).strftime("%A") %></a></li>
-									<li><a href="#"><%= (@today + 4).strftime("%A") %></a></li>
-									<li><a href="#"><%= (@today + 5).strftime("%A") %></a></li>
-									<li><a href="#"><%= (@today + 6).strftime("%A") %></a></li>
+									<li><%= link_to "Today", showtimes_url %></li>
+									<li><%= link_to "Tomorrow", showtimes_url %></li>
+									<li><%= link_to (@today + 2).strftime("%A"), showtimes_url %></li>
+									<li><%= link_to (@today + 3).strftime("%A"), showtimes_url %></li>
+									<li><%= link_to (@today + 4).strftime("%A"), showtimes_url %></li>
+									<li><%= link_to (@today + 5).strftime("%A"), showtimes_url %></li>
+									<li><%= link_to (@today + 6).strftime("%A"), showtimes_url %></li>
 								</ul>
 							</div>
             </div>
