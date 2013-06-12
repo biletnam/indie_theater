@@ -86,20 +86,21 @@ Tuesday
 Movies
 Showtimes
 
+Wednesday
+===
+Showtime
+Admin access: add movies, showtimes
+
 Views
 ==
 Showtimes Index (sort by date)
+Showtime Create, Update, Destroy
 Homepage (Carousel of posters)
-
-Wednesday
-===
-Admin access: add movies, showtimes
-Customer
-Ticket
 
 Thursday
 ===
-Ticket Purchasing
+Customer
+Ticket
 
 Friday
 ===
