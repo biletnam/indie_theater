@@ -53,7 +53,7 @@
           <div class="post-info">
             <h3><%= link_to c.full_title, movie_url(c) %></h3>
             <p>
-							<time>Opens <%= "#{c.opening_date.to_date}" %></time><br>
+							<strong>Opens: </strong><%= c.opening_date.strftime('%A, %B %e') %><br>
 							<strong>Runtime:</strong> <%= "#{c.runtime} mins." %><br>
 							<strong>Director:</strong>  <%= "#{c.director}" %><br>
 							<strong>Genres:</strong> <% c.genres.each do |g| %> <%= g.name %> <% end %><br>
