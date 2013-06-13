@@ -10,4 +10,5 @@ IndieTheater::Application.routes.draw do
   resources :admins
   resources :movies
   resources :showtimes
+  resources :orders
 end

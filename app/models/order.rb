@@ -3,4 +3,6 @@ class Order < ActiveRecord::Base
     
   belongs_to :customer
   has_many :tickets
+  
+  accepts_nested_attributes_for :tickets
 end

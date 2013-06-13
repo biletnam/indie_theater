@@ -15,5 +15,6 @@ class ShowtimesController < ApplicationController
   def show
     @showtime = Showtime.find(params[:id])
     @movie = Movie.find(params[:movie])
+    @order = Order.new
   end
 end
