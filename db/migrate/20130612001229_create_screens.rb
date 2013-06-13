@@ -1,7 +1,7 @@
-class CreateShowtimes < ActiveRecord::Migration
+class CreateScreens < ActiveRecord::Migration
   def change
     create_table :showtimes do |t|
-      t.datetime :screening
+      t.integer :seats
       
       t.timestamps
     end
