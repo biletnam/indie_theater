@@ -13,4 +13,12 @@ module ApplicationHelper
     
     link_to(string, showtimes_url(:day => offset), :class => link_class)
   end
+  
+  def login_logout_link
+     if customer_signed_in?
+       link_to("Logout", destroy_customer_session_url, :method => "delete")
+     else 
+       link_to("Login", new_customer_session_url) 
+     end
+  end
 end

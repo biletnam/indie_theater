@@ -1,4 +1,6 @@
 IndieTheater::Application.routes.draw do
+  devise_for :customers
+
   devise_for :admins
 
   root :to => "pages#index"
