@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   
-  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update]
+  before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update, :destory]
   
   def index
     now = Date.today.to_s
@@ -43,5 +43,10 @@ class MoviesController < ApplicationController
     else
       render :edit
     end
+  end
+  
+  def destroy
+    Movie.find(params[:id]).destroy
+    redirect_to :action => 'index'
   end
 end

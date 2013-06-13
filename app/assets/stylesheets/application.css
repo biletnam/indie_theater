@@ -385,3 +385,13 @@
 		background: #34495e;
 		color: #fff;
 	}
+	
+	/* -- ADMIN CONTROLS -- */
+	
+	.online form {
+		display: inline;
+	}
+	
+	.offline form {
+		display: inline;
+	}		

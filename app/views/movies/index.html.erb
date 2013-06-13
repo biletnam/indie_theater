@@ -1,27 +1,31 @@
 <div class="content group">	
 	<% if admin_signed_in? %>
 	
-	<h1>Online</h1>
-		<ul>
-		<% Movie.online.reverse.each do |movie| %>
+	<div class="online">
+		<h1>Online</h1>
+			<ul>
+			<% Movie.online.reverse.each do |movie| %>
 			
-		<li><%= movie.title %> 
-				<%= link_to "view", movie_url(movie) %>
-				<%= link_to "edit", edit_movie_url(movie) %></li>
+			<li><%= link_to "#{movie.title}", movie_url(movie) %>
+					<%= button_to "Edit", edit_movie_url(movie), :method => "get", :form_class => "edit-button" %>
+					<%= button_to "Delete", movie_url(movie), :method => "delete", :form_class => "delete-button" %></li>
 		
-		<% end %>
-		</ul><hr>
+			<% end %>
+			</ul>
+		</div><hr>
 	
-	<h1>Offline</h1>	
-		<ul>
-		<% Movie.offline.reverse.each do |movie| %>
+	<div class="offline">
+		<h1>Offline</h1>	
+			<ul>
+			<% Movie.offline.reverse.each do |movie| %>
 		
-		<li><%= movie.title %> 
-				<%= link_to "view", movie_url(movie) %>
-				<%= link_to "edit", edit_movie_url(movie) %></li>
+			<li><%= link_to "#{movie.title}", movie_url(movie) %>
+					<%= button_to "Edit", edit_movie_url(movie), :method => "get", :form_class => "edit-button" %>
+					<%= button_to "Delete", movie_url(movie), :method => "delete", :form_class => "delete-button" %></li>
 	
-		<% end %>
-	</ul>
+			<% end %>
+		</ul>
+	</div>
 		
 	<% else %>
 		<%= render "list" %>
