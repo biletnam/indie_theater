@@ -3,7 +3,7 @@ class CustomersController < ApplicationController
   # before_filter :authenticate_admin!
   
   def show
-    @customer == current_customer
+    @customer = current_customer
   end
   
   def edit
@@ -13,4 +13,15 @@ class CustomersController < ApplicationController
       redirect_to root_url
     end
   end
+  
+  def update
+    @customer = Customer.find(params[:id])
+    
+    if @customer.update_attributes(params[:customer])
+      redirect_to customer_url(@customer)
+    else
+      render :edit
+    end
+  end
+  
 end
