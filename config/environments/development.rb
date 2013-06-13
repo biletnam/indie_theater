@@ -1,3 +1,5 @@
+require_relative '../initializers/keys.rb'
+
 IndieTheater::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -34,4 +36,15 @@ IndieTheater::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => "indie_theater_development",
+    :access_key_id => ENV['S3_KEY'],
+    :secret_access_key =>  ENV['S3_SECRET']
+  }
+}
 end
