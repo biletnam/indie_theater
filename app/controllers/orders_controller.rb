@@ -1,4 +1,13 @@
-class OrdersController < ActionController::Base
+class OrdersController < ApplicationController
+  
+  before_filter :authenticate_customer!
+  
+  def show
+    @today = DateTime.now
+    @order = Order.find(params[:id])
+    @showtime = @order.tickets.first.showtime
+    @movie = @showtime.movie
+  end
   
   def create
     quantity = params[:quantity].to_i
@@ -18,4 +27,10 @@ class OrdersController < ActionController::Base
       redirect_to root_url
     end
   end
+  
+  def destroy
+    Order.find(params[:id]).destroy
+    redirect_to customer_url(current_customer)
+  end
+  
 end

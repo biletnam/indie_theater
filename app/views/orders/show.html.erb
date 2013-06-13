@@ -1,0 +1,11 @@
+<div class="content group">
+	<h1>Order Details</h1>
+	
+	<%= "#{@order.tickets.size} tickets for #{@movie.title} on #{@showtime.time.strftime('%A, %b %d at %l:%M %p')}" %>
+	
+	<% if (@showtime.time > @today) %>
+		<div><%= button_to "Cancel Order", order_url(@order), :method => "delete" %></div>
+	<% end %>
+	
+	<div><%= link_to "My Account", customer_url(current_customer)%></div>
+</div>

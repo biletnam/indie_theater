@@ -16,7 +16,7 @@
 	
 	<ul>
 		<% @orders.each do |order| %>
-			<li><%= order.tickets.size %></li>
+			<li><%= link_to order.created_at.strftime('%B, %b %d'), order_url(order) %></li>
 		<% end %>
 	</ul>
 </div>

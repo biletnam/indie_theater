@@ -7,6 +7,7 @@ class Movie < ActiveRecord::Base
   has_many :movie_genres
   has_many :genres, :through => :movie_genres
   has_many :showtimes
+  has_many :tickets, :through => :showtimes
 
                   
   has_attached_file :poster, :styles => { :small => "78x118", :medium => "198x298" }, 
