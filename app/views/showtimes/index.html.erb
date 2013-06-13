@@ -66,7 +66,7 @@
 								
 									<% if @showtimes.include?(s) %>
 										<% if (s.time > @today) %>
-											<li><%= link_to s.time.strftime('%l:%M %p'), "#" %></li>
+											<li><%= link_to s.time.strftime('%l:%M %p'), showtime_url(s, :movie => n.id) %></li>
 										<% else %>
 											<li><%= s.time.strftime('%l:%M %p')%></li>
 										<% end %>

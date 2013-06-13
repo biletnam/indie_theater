@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   
-  # before_filter :authenticate_admin!
+  before_filter :authenticate_customer!
   
   def show
     @customer = current_customer
@@ -23,5 +23,4 @@ class CustomersController < ApplicationController
       render :edit
     end
   end
-  
 end

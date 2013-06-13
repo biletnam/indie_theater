@@ -113,4 +113,5 @@ Friday
 ===
 Polish functional features
 Bonus: customer facebook login, leave reviews, share
+
 Deploy to Heroku
