@@ -6,7 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "paperclip", "~> 3.0"
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 1.5.7'
 gem "nested_form"
 gem 'devise'
 
