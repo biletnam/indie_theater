@@ -374,6 +374,13 @@
 		padding: 0 0 0 10px;
 	}
 	
+	.highlighted {
+		font-weight: bold;
+		background: #ccc;
+		padding: 4px;
+		border-radius: 7px;
+	}
+	
 	/* -- FLASH -- */	
 	
 	.notice {

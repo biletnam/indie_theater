@@ -30,13 +30,9 @@
             <div class="day-list">
 							<div class="week">
 	              <ul>
-									<li><%= link_to "Today", showtimes_url(:day => 0) %></li>
-									<li><%= link_to "Tomorrow", showtimes_url(:day => 1) %></li>
-									<li><%= link_to (@today + 2).strftime("%A"), showtimes_url(:day => 2) %></li>
-									<li><%= link_to (@today + 3).strftime("%A"), showtimes_url(:day => 3) %></li>
-									<li><%= link_to (@today + 4).strftime("%A"), showtimes_url(:day => 4) %></li>
-									<li><%= link_to (@today + 5).strftime("%A"), showtimes_url(:day => 5) %></li>
-									<li><%= link_to (@today + 6).strftime("%A"), showtimes_url(:day => 6) %></li>
+									<% (0..6).each do |i| %>
+										<li><%= link_to_showtime_day(i, @offset) %></li>
+									<% end %>
 								</ul>
 							</div>
             </div>

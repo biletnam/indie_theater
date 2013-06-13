@@ -71,6 +71,7 @@ Search by
 Gameplan
 ====
 
+
 Monday
 ===
 Movies
@@ -81,25 +82,28 @@ Views
 Movies Index
 Movies Show
 
+
 Tuesday
 ===
 Movies
 Showtimes
+
 
 Wednesday
 ===
 Showtime
 Admin access: add movies, showtimes, add other admins
 Super admin can add, delete other admins
-Customer: facebook login, rate a film, share
 
 Views
 ==
 Showtimes Index (sort by date)
 Showtime Create, Update, Destroy
 
+
 Thursday
 ===
+Customer: basic login
 Ticket
 
 Views
@@ -108,4 +112,5 @@ Homepage (Carousel of posters)
 Friday
 ===
 Polish functional features
+Bonus: customer facebook login, leave reviews, share
 Deploy to Heroku
