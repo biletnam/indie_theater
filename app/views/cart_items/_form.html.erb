@@ -4,7 +4,7 @@
 	<%= f.text_field :quantity %></div>
 	
 	<%= f.hidden_field(:customer_id, :value => @customer.id) %>
-	<%= f.hidden_field(:screening_id, :value => @showtime.id) %>
+	<%= f.hidden_field(:showtime_id, :value => @showtime.id) %>
 
 <%= f.submit "Put Item in Cart" %>
 

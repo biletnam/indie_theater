@@ -4,7 +4,9 @@ class CustomersController < ApplicationController
   
   def show
     @customer = current_customer
+    @cart_items = current_customer.cart_items
     @orders = current_customer.orders
+    @order = Order.new
   end
   
   def edit

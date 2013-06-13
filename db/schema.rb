@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(:version => 20130613210441) do
   create_table "cart_items", :force => true do |t|
     t.integer  "customer_id"
     t.integer  "quantity"
-    t.integer  "screening_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "showtime_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "customers", :force => true do |t|

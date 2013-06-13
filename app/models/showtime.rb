@@ -4,4 +4,5 @@ class Showtime < ActiveRecord::Base
   belongs_to :movie
   belongs_to :screen
   has_many :tickets
+  has_many :cart_items
 end
