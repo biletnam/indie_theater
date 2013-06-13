@@ -1,6 +1,6 @@
 class CreateScreens < ActiveRecord::Migration
   def change
-    create_table :showtimes do |t|
+    create_table :screens do |t|
       t.integer :seats
       
       t.timestamps
