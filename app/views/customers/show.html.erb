@@ -3,7 +3,11 @@
 	
 	<%= button_to "Update Account Info", edit_customer_url, :method => "get" %>
 	
-	<h2>My Cart</h2>
+	<h2>My Orders</h2>
 	
-	
+	<ul>
+		<% @orders.each do |order| %>
+			<li><%= order.tickets.size %></li>
+		<% end %>
+	</ul>
 </div>

@@ -1,0 +1,11 @@
+<%= form_for(@cart_item) do |f| %>
+
+	<div><%= f.label :quantity %>
+	<%= f.text_field :quantity %></div>
+	
+	<%= f.hidden_field_tag(:customer_id, ) %>
+	<%= f.hidden_field_tag(:showtime_id, @showtime.id) %>
+
+<%= f.submit "Put Item in Cart" %>
+
+<% end %>

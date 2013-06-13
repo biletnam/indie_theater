@@ -2,7 +2,7 @@
 
 <%= f.fields_for :tickets do |ticket_form| %>
   <%#= ticket_form.datetime_select :time %>
-  <%= ticket_form.link_to_remove "Remove this ticket" %>
+  <%= ticket_form.link_to_remove "Remove this showtime" %>
 <% end %>
 <p><%= f.link_to_add "Add a ticket", :tickets %></p>		
 

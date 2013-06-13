@@ -4,6 +4,7 @@ class CustomersController < ApplicationController
   
   def show
     @customer = current_customer
+    @orders = current_customer.orders
   end
   
   def edit

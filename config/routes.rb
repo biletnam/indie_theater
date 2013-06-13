@@ -11,4 +11,5 @@ IndieTheater::Application.routes.draw do
   resources :movies
   resources :showtimes
   resources :orders
+  resources :cart_items
 end

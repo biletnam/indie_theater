@@ -26,8 +26,10 @@
           <p>
 						You have selected <%= "#{@movie.title} on #{@showtime.time.strftime('%A, %b %d at %l:%M %p')}"%>
 					</p>
-					<%= render "/orders/form" %>
-        </div>
+					
+					<%= render "cart_items/form" %>
+        
+				</div>
   
       </header>
     </article>
