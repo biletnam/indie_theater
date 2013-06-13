@@ -1,7 +1,6 @@
 class Showtime < ActiveRecord::Base
-  attr_accessible :time, :ticket_ids
+  attr_accessible :movie_id, :screen_id, :time
   
-  has_many :movie_showtimes
-  has_many :movies, :through => :movie_showtimes
-  has_many :tickets
+  belongs_to :movie
+  belongs_to :screen
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613173831) do
+ActiveRecord::Schema.define(:version => 20130613160050) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -63,13 +63,6 @@ ActiveRecord::Schema.define(:version => 20130613173831) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "movie_showtimes", :force => true do |t|
-    t.integer  "movie_id"
-    t.integer  "showtime_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "movies", :force => true do |t|
     t.string   "title"
     t.text     "description"
@@ -96,7 +89,15 @@ ActiveRecord::Schema.define(:version => 20130613173831) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "screens", :force => true do |t|
+    t.integer  "seats"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "showtimes", :force => true do |t|
+    t.integer  "movie_id"
+    t.integer  "screen_id"
     t.datetime "time"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -104,10 +105,9 @@ ActiveRecord::Schema.define(:version => 20130613173831) do
 
   create_table "tickets", :force => true do |t|
     t.integer  "customer_id"
+    t.integer  "showtime_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "movie_id"
-    t.integer  "showtime_id"
   end
 
 end

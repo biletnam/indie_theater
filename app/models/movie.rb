@@ -1,15 +1,13 @@
 class Movie < ActiveRecord::Base
   attr_accessible :title, :description, :opening_date, :starring, :director, 
                   :runtime, :released_by, :three_d, :online, :poster, :trailer,
-                  :rating_id, :genre_ids, :showtime_ids, :showtimes_attributes,
-                  :ticket_ids
+                  :rating_id, :genre_ids, :showtime_ids, :showtimes_attributes
                   
   belongs_to :rating
   has_many :movie_genres
   has_many :genres, :through => :movie_genres
-  has_many :movie_showtimes
-  has_many :showtimes, :through => :movie_showtimes
-  has_many :tickets
+  has_many :showtimes
+
                   
   has_attached_file :poster, :styles => { :small => "78x118", :medium => "198x298" }, 
                     :default_url => "/images/:style/missing.png"
