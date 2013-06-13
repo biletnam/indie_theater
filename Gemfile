@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem "paperclip", "~> 3.0"
-gem 'sqlite3'
 gem "nested_form"
 gem 'devise'
 
@@ -22,9 +21,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do 
   gem 'better_errors'
-  'letter_opener'
+  gem 'letter_opener'
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'
