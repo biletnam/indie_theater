@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613160050) do
+ActiveRecord::Schema.define(:version => 20130613185248) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -83,6 +83,12 @@ ActiveRecord::Schema.define(:version => 20130613160050) do
     t.integer  "rating_id"
   end
 
+  create_table "orders", :force => true do |t|
+    t.integer  "customer_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "ratings", :force => true do |t|
     t.string   "value"
     t.datetime "created_at", :null => false
@@ -104,7 +110,7 @@ ActiveRecord::Schema.define(:version => 20130613160050) do
   end
 
   create_table "tickets", :force => true do |t|
-    t.integer  "customer_id"
+    t.integer  "order_id"
     t.integer  "showtime_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

@@ -1,6 +1,6 @@
 class Ticket < ActiveRecord::Base
-  attr_accessible :customer_id, :showtime_id
+  attr_accessible :order_id, :showtime_id
   
-  belongs_to :customer
+  belongs_to :order
   belongs_to :showtime
 end
