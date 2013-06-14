@@ -408,7 +408,6 @@
 	}
 	
 	.highlighted {
-		font-weight: bold;
 		background: #8e44ad;
 		padding: 4px;
 		border-radius: 7px;
@@ -438,4 +437,41 @@
 	
 	.offline form {
 		display: inline;
+	}
+	
+	/* -- ACCOUNT INFO -- */
+	
+	.my-account {
+		font-size: 30px;
+		font-weight: bold;
+		margin: 0 0 10px 0;
+	}
+	
+	.update-info {
+	}
+	
+	.cart {
+		font-size: 20px;
+		margin: 20px 0 0 0 ;
+	}
+	
+	.item {
+		margin: 10px 0;
+	}
+	
+	.orders {
+		font-size: 20px;
+		margin: 20px 0 0 0 ;
+	}
+	
+	.order {
+		margin: 10px 0;
+	}
+	
+	.back-to-main {
+		margin: 5px 0 20px 0;
+	}
+	
+	.customer-field {
+		margin: 10px 0;
 	}		

@@ -61,6 +61,8 @@ IndieTheater::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
   
+  config.action_mailer.default_url_options = { :host => 'http://tranquil-retreat-8662.herokuapp.com/' }
+  
   config.time_zone = 'America/New_York'
 
   # Log the query plan for queries taking more than this (works
