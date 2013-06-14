@@ -53,7 +53,11 @@ class AdminsController < ApplicationController
       redirect_to root_url
     end
     
-    Admin.find(params[:id]).destroy
-    redirect_to :action => 'index'
+    @admin = Admin.find(params[:id])
+    unless @admin.super
+      @admin.destroy
+    end
+    
+    redirect_to :action => 'index'  
   end
 end
