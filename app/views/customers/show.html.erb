@@ -1,5 +1,6 @@
 <div class="content group">
-	<h1 class="my-account">My Account</h1><%= link_to "Update My Information", edit_customer_url, :method => "get", :class => "update-info" %><hr>
+	<h1 class="my-account">My Account</h1><%= link_to "Update My Information", edit_customer_url, :method => "get", :class => "update-info" %><br> 
+	<%= link_to("Sign Out", destroy_customer_session_url, :method => "delete") %><hr>
 	
 	<div>
 		<h2 class="cart">Shopping Cart</h2>
