@@ -4,7 +4,6 @@ class ShowtimesController < ApplicationController
   
   def index
     @today = DateTime.now    
-    now = Date.today.to_s
     @day = @today + params[:day].to_i
     @offset = params[:day].to_i
     

@@ -3,14 +3,14 @@ class MoviesController < ApplicationController
   before_filter :authenticate_admin!, :only => [:new, :create, :edit, :update, :destory]
   
   def index
-    now = Date.today.to_s
+    now = DateTime.now
     @now_playing = Movie.where("opening_date <= ?", now).online
     @coming_soon = Movie.where("opening_date > ?", now).online
   end
   
   def show
     @movie = Movie.find(params[:id])
-    now = Date.today.to_s
+    now = DateTime.now
     @now_playing = Movie.where("opening_date <= ?", now).online
     @coming_soon = Movie.where("opening_date > ?", now).online
   end
