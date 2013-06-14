@@ -1,6 +1,6 @@
 class ShowtimesController < ApplicationController
   
-  # before_filter :authenticate_customer!, :only => [:show]
+  before_filter :authenticate_customer!, :only => [:show]
   
   def index
     @today = DateTime.now    

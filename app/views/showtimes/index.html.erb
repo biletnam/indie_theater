@@ -65,7 +65,7 @@
 								<% n.showtimes.sort_by {|showtime| showtime.time }.each do |s| %>
 								
 									<% if @showtimes.include?(s) %>
-										<% if (s.time > @today) %>
+										<% if (s.time > @today) && (s.tickets.size < s.screen.seats) %>
 											<li><%= link_to s.time.strftime('%l:%M %p'), showtime_url(s, :movie => n.id) %></li>
 										<% else %>
 											<li><%= s.time.strftime('%l:%M %p')%></li>
