@@ -62,7 +62,8 @@
 	<%= f.radio_button :online, true %></div>
 	
 	<%= f.fields_for :showtimes do |showtime_form| %>
-	  <%= showtime_form.datetime_select :time %>
+		<div><%= showtime_form.datetime_select :time %></div>
+		<div>Screen: <%= showtime_form.collection_select(:screen_id, Screen.all, :id, :id) %></div>
 	  <%= showtime_form.link_to_remove "Remove this showtime" %>
 	<% end %>
 	<p><%= f.link_to_add "Add a showtime", :showtimes %></p>		
