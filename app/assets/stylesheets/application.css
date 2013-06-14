@@ -441,7 +441,7 @@
 	
 	/* -- ACCOUNT INFO -- */
 	
-	.my-account {
+	.main-header {
 		font-size: 30px;
 		font-weight: bold;
 		margin: 0 0 10px 0;
@@ -475,3 +475,10 @@
 	.customer-field {
 		margin: 10px 0;
 	}		
+	
+	/* -- ORDERS -- */
+	
+	
+	.cancel-form {
+		margin: 20px 0 10px 0;
+	}	
