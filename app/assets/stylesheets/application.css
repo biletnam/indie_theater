@@ -134,11 +134,10 @@
 		height: 480px;
 	}
 	
-/*	#carousel {
+	#carousel {
 		position: relative;
-		height: 620px;
-		width: 480px;
-		margin: 100px auto 20px auto;
+		width: 620px;
+		height: 480px;
 		overflow: hidden;
 	}
 	
@@ -147,6 +146,8 @@
 		top: 0;
 		position: absolute;
 		list-style: none;
+		width: 1860px;
+		height: auto;
 	}
 	
 	#carousel > ul:after {
