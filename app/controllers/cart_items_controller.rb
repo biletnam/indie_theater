@@ -15,4 +15,9 @@ class CartItemsController < ApplicationController
       redirect_to root_url 
     end
   end
+  
+  def destroy
+    CartItem.find(params[:id]).destroy
+    redirect_to customer_url(current_customer)
+  end
 end

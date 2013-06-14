@@ -7,7 +7,8 @@
 		<ul>
 			<% @cart_items.each do |item| %>
 				<li class="item"><%= "#{item.quantity} tickets - #{item.showtime.movie.title} - #{item.showtime.time.strftime('%A, %b %d at %l:%M %p')}" %>
-					<%= button_to "Place Order", orders_url(@order, :quantity => item.quantity, :showtime_id => item.showtime.id, :cart_item_id => item.id) %></li>
+					<%= button_to "Place Order", orders_url(@order, :quantity => item.quantity, :showtime_id => item.showtime.id, :cart_item_id => item.id) %>
+				<%= button_to "Remove From Cart", cart_item_url(item), :method => "delete" %></li>
 			<% end %>
 		</ul>
 	</div><hr>
