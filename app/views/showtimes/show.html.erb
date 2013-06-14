@@ -28,7 +28,9 @@
 					</p>
 					
 					<%= render "cart_items/form" %>
-        
+        	
+			    <%= "#{@showtime.screen.seats - @showtime.tickets.size} seats open" %>
+					
 				</div>
   
       </header>
