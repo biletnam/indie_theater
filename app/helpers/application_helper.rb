@@ -16,9 +16,9 @@ module ApplicationHelper
   
   def login_logout_link
      if customer_signed_in?
-       link_to("Logout", destroy_customer_session_url, :method => "delete")
+       link_to("Sign Out", destroy_customer_session_url, :method => "delete")
      else 
-       link_to("Login", new_customer_session_url) 
+       link_to("Sign In", new_customer_session_url) 
      end
   end
 end

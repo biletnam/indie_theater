@@ -130,10 +130,41 @@
 		text-align: right;
 	}
 	
-	.posts > a > img {
+	.posts > ul > li > a > img {
 		width: 620px;
 		height: 480px;
 	}
+	
+/*	#carousel {
+		position: relative;
+		height: 620px;
+		width: 480px;
+		margin: 100px auto 20px auto;
+		overflow: hidden;
+	}
+	
+	#carousel > ul {
+		left: 0px;
+		top: 0;
+		position: absolute;
+		list-style: none;
+	}
+	
+	#carousel > ul:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	#carousel > ul > li {
+		float: left;
+		width: 620px;
+		height: 480px;
+		background: blue;
+		font-size: 30px;
+		text-align: center;
+		
+	}*/
 
 	/* --- SIDEBAR --- */
 
@@ -378,9 +409,13 @@
 	
 	.highlighted {
 		font-weight: bold;
-		background: #ccc;
+		background: #8e44ad;
 		padding: 4px;
 		border-radius: 7px;
+	}
+	
+	.week > ul > li > a.highlighted {
+		color: #fff;
 	}
 	
 	/* -- FLASH -- */	
