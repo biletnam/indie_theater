@@ -17,6 +17,12 @@
 				<li><%= link_to (image_tag "the-internship.jpg"), "/movies/1" %></li>
 			</ul>			
     </div>
+		
+	  <div id="carousel-nav">
+	    <span class="previous">Previous</span> &mdash;
+	    <strong class="number">0 / 0</strong> &mdash;
+	    <span class="next">Next</span>
+	  </div>
   
   </section>
 </div>
@@ -26,7 +32,7 @@
 
 var Carousel = (function(){
 	
-	var delay = 5000;
+	var delay = 4000;
 	var carousel = $("#carousel");
 	var itemsHolder = carousel.find("> ul");
 	var items = itemsHolder.find("> li");
@@ -34,10 +40,20 @@ var Carousel = (function(){
 	var currentItem = -1;
 	var timerId;
 	
+	var nextButton = $("#carousel-nav > .next");
+  var previousButton = $("#carousel-nav > .previous");
+  var numberLabel = $("#carousel-nav > .number");
+	
 	var init = function(){
 		itemsHolder.css({"width": (items.length * itemWidth) + "px"});
+		bind();
 		start();
 	};
+	
+  var bind = function(){
+    nextButton.on("click", next);
+    previousButton.on("click", previous);
+  }
 	
 	var start = function(){
 		loop();
@@ -76,7 +92,7 @@ var Carousel = (function(){
 	
 	var move = function(){
 		var html = (currentItem + 1) + " / " + items.length;
-		// numberLabel.html(html);
+		numberLabel.html(html);
 		
 		var leftPosition = currentItem * itemWidth * -1;
 		itemsHolder.stop().animate({"left": leftPosition + "px"}, 1000);

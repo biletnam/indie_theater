@@ -121,24 +121,29 @@ Week 2
 ====
 
 Features for this week:
--Customer facebook login, leave reviews, share
+
+Fixes
+
+Improvements
+-Add Caching
+
+Monday
+===
+-Heroku pinger: https://github.com/thoughtpolice/heroku-ping
 -Add nav to Carousel
 -Add placeholder contact, about page
 -Seed it with showtimes for the next month (1 per day)
 -How do you ensure two movies don't play on the screen at the same time? (Do you worry about that?)
--Contact Form
 -Fix mail sending
--Clean up routes
-
-What can I add with Javascript?
-===
--Dropdown on "My account navbar element"
-
-Monday
-===
 
 Tuesday
 ===
+-Prettify all forms
+-Customer facebook login, leave reviews, share: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview
+-Contact Form
+-Clean up routes
+-Dropdown on "My Account" navbar element
+
 
 Wednesday
 ===
