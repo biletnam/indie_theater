@@ -15,5 +15,7 @@
 	  <div><%= f.submit "Sign in" %></div>
 	<% end %>
 
+	<div><%= link_to "Sign in with Facebook", customer_omniauth_authorize_path(:facebook) %></div>
+
 	<%= render "devise/shared/links" %>
 </div>

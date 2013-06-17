@@ -1,5 +1,5 @@
 IndieTheater::Application.routes.draw do
-  devise_for :customers
+  devise_for :customers, :controllers => { :omniauth_callbacks => "customers/omniauth_callbacks" }
   devise_for :admins
 
   root :to => "pages#index"
