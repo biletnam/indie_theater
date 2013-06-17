@@ -19,5 +19,7 @@
 		<% @orders.each do |order| %>
 			<li class="order"><%= link_to order.created_at.strftime('%B %d at %l:%M %p'), order_url(order) %></li>
 		<% end %>
-	</ul>
+	</ul><hr>
+	
+	<div class="cancel-form"><%= button_to "Delete My Account", customer_url(@customer), :method => "delete" %></div>
 </div>

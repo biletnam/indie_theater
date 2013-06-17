@@ -26,4 +26,9 @@ class CustomersController < ApplicationController
       render :edit
     end
   end
+  
+  def destroy
+    Customer.find(params[:id]).destroy
+    redirect_to root_url
+  end
 end

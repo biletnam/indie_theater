@@ -115,3 +115,36 @@ Polish functional features
 Bonus: customer facebook login, leave reviews, share
 
 Deploy to Heroku
+
+
+Week 2
+====
+
+Features for this week:
+-Customer facebook login, leave reviews, share
+-Add nav to Carousel
+-Add placeholder contact, about page
+-Seed it with showtimes for the next month (1 per day)
+-How do you ensure two movies don't play on the screen at the same time? (Do you worry about that?)
+-Contact Form
+-Fix mail sending
+-Clean up routes
+
+What can I add with Javascript?
+===
+-Dropdown on "My account navbar element"
+
+Monday
+===
+
+Tuesday
+===
+
+Wednesday
+===
+
+Thursday
+===
+
+Friday
+===

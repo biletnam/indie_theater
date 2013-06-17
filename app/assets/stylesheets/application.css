@@ -426,13 +426,13 @@
 	/* -- FLASH -- */	
 	
 	.notice {
- 		background: #34495e;
-		color: #fff;
+ 		background: #bdc3c7;
+		color: black;
 	}
 	
 	.alert {
-		background: #34495e;
-		color: #fff;
+		background: #bdc3c7;
+		color: black;
 	}
 	
 	/* -- ADMIN CONTROLS -- */
