@@ -232,18 +232,22 @@
 	.profile-nav {
 	}
 
-	.profile-nav > ul {
+	.profile-info > ul {
 		border-bottom: 1px solid #ccc;
 	}
 
-	.profile-nav > ul > li {
+	.profile-info > ul > li {
 		border-top: 1px solid #ccc;
 	}
 
-	.profile-nav > ul > li > a {
+	.profile-info > ul > li > a {
 		display: block;
 		padding: 5px;
 		font-weight: bold;
+	}
+	
+	.profile-info > ul > li > a:hover {
+		text-decoration: underline;
 	}
 
 	/* --- POSTS --- */
@@ -495,8 +499,8 @@
 		margin: 5px 0 20px 0;
 	}
 	
-	.customer-field {
-		margin: 10px 0;
+	.customer-label {
+		margin: 10px 0 0 0;
 	}		
 	
 	/* -- ORDERS -- */

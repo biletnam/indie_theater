@@ -3,32 +3,31 @@
 	
 	<%= nested_form_for(@movie) do |f| %>
 	
-	<div><%= f.label :title %>
-	<%= f.text_field :title %></div>
+	<div><%= f.label :title %></div>
+	<div><%= f.text_field :title %></div>
 	
-	<div><%= f.label :description %>
-	<%= f.text_area :description %></div>
+	<div><%= f.label :description %></div>
+	<div><%= f.text_area :description %></div>
 	
-	<div><%= f.label :rating_id, "Rating" %>
-	<%= collection_select(:movie, :rating_id, Rating.all, :id, :value) %></div>
+	<div><%= f.label :rating_id, "Rating" %></div>
+	<div><%= collection_select(:movie, :rating_id, Rating.all, :id, :value) %></div>
 	
-	<div><%= f.label :opening_date %>
-	<%= f.date_select :opening_date %></div>
+	<div><%= f.label :opening_date %></div>
+	<div><%= f.date_select :opening_date %></div>
 	
-	<div><%= f.label :starring %>
-	<%= f.text_field :starring %></div>
+	<div><%= f.label :starring %></div>
+	<div><%= f.text_field :starring %></div>
 	
-	<div><%= f.label :director %>
-	<%= f.text_field :director %></div>
+	<div><%= f.label :director %></div>
+	<div><%= f.text_field :director %></div>
 	
-	<div><%= f.label :runtime %>
-	<%= f.text_field :runtime %></div>
+	<div><%= f.label :runtime %></div>
+	<div><%= f.text_field :runtime %></div>
 	
-	<div><%= f.label :released_by %>
-	<%= f.text_field :released_by %></div>
+	<div><%= f.label :released_by %></div>
+	<div><%= f.text_field :released_by %></div>
 	
-	Genres: 
-	<div>  
+	<div><div>Genres:</div>  
 		<% Genre.all.each do |genre| %>
 		<label>
       
@@ -49,11 +48,11 @@
 	<%= f.label :three_d, "True", :value => true %>
 	<%= f.radio_button :three_d, true %></div>
 	
-	<%= f.label :poster %>
-	<%= f.file_field :poster %>
+	<div><%= f.label :poster %></div>
+	<div><%= f.file_field :poster %></div>
 	
-	<div><%= f.label :trailer %>
-	<%= f.text_field :trailer %></div>	
+	<div><%= f.label :trailer %></div>
+	<div><%= f.text_field :trailer %></div>	
 	
 	<div> Online? <%= f.label :online, "False", :value => false %>
 	<%= f.radio_button :online, false %>

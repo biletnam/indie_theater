@@ -134,11 +134,12 @@ Monday
 -Add placeholder contact, about page
 -Seed it with showtimes for the next month (1 per day)
 -How do you ensure two movies don't play on the screen at the same time? (Do you worry about that?)
--Fix mail sending
+-Prettify all forms
 
 Tuesday
 ===
--Prettify all forms
+-Fix mail sending
+
 -Customer facebook login, leave reviews, share: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview
 -Contact Form
 -Clean up routes
