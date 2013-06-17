@@ -4,7 +4,9 @@ IndieTheater::Application.routes.draw do
 
   root :to => "pages#index"
 
-  resources :pages, :only => [:index]
+  resources :pages, :only => [:index] 
+  match '/about' => 'pages#about'
+  match '/contact' => 'pages#contact'
   
   resources :customers
   resources :admins

@@ -323,6 +323,10 @@
 		font-size: 12px;
 	}
 	
+	.footer a:hover {
+		text-decoration: underline;
+	}
+	
 	/* --- LEFT/RIGHT COLUMNS --- */
 
 	.content-left {
