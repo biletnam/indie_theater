@@ -99,6 +99,10 @@
 		font-size: 18px;
 	}
 	
+	.header-nav > ul > li > a:hover {
+		color: black;
+	}	
+	
 	/* --- CONTENT --- */
 
 	.content {
