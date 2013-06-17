@@ -27,7 +27,7 @@
 	
 	body {
 		font-family: sans-serif;
-		background: #34495e;
+		background: #bdc3c7;
 		color: #333;
 		font-size: 16px;
 	}
@@ -60,14 +60,14 @@
 	/* --- HEADER --- */
 	
 	.header {
-		background: #8e44ad;
+		background: #e74c3c;
 	}
 	
 	.header-wrap {
 		margin: auto;
 		width: 900px;
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
+/*		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;*/
 	}
 	
 	.header-logo {
@@ -78,22 +78,25 @@
 		display: block;
 		padding: 10px 20px;
 		color: #ecf0f1;
+		font-family: 'Average Sans', sans-serif;
+		font-size: 20px;
 	}
 	
 	.header-nav {
-		float: right;
+		float: right;			
 	}
 	
 	.header-nav > ul > li {
 		float: left;
-		border-left: 1px solid #eee;
+/*		border-left: 1px solid #eee;*/
 	}
 	
 	.header-nav > ul > li > a {
 		display: block;
 		padding: 10px 20px;
 		color: #ecf0f1;
-		font-size: 14px;
+		font-family: 'Average Sans', sans-serif;
+		font-size: 18px;
 	}
 	
 	/* --- CONTENT --- */
@@ -103,8 +106,8 @@
 		width: 860px;
 		padding: 20px;
 		margin: auto;
-		border-left: 1px solid #ccc;
-		border-right: 1px solid #ccc;
+/*		border-left: 1px solid #ccc;
+		border-right: 1px solid #ccc;*/
 	}
 
 	.content-sidebar {
@@ -279,7 +282,7 @@
 		margin-bottom: 50px;
 		background: #fff;
 		color: #999;
-		border: 1px solid #ccc;
+		border-top: 1px solid #ccc;
 	}
 	
 	.footer-copy {
@@ -407,7 +410,7 @@
 	}
 	
 	.highlighted {
-		background: #8e44ad;
+		background: #e74c3c;
 		padding: 4px;
 		border-radius: 7px;
 	}
