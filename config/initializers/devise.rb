@@ -2,7 +2,7 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   require "omniauth-facebook"
-    config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"],
+    config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"],
       {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
