@@ -128,6 +128,10 @@ Improvements
 -Add Caching
 "Are you sure?" buttons for account deletion
 
+Optional
+-share
+-Contact Form
+
 Monday
 ===
 -Heroku pinger: https://github.com/thoughtpolice/heroku-ping
@@ -143,9 +147,6 @@ Tuesday
 
 -Customer facebook login: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview and http://tammersaleh.com/posts/managing-heroku-environment-variables-for-local-development 
 -leave reviews
-
--share
--Contact Form
 -Clean up routes
 -Dropdown on "My Account" navbar element
 

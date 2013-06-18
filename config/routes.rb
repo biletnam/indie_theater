@@ -9,10 +9,10 @@ IndieTheater::Application.routes.draw do
   match '/contact' => 'pages#contact'
   
   resources :customers
-  resources :admins
+  resources :admins, :except => [:show]
   resources :movies
-  resources :showtimes
-  resources :orders
-  resources :cart_items
+  resources :showtimes, :only => [:index, :show]
+  resources :orders, :only => [:show, :create, :destroy]
+  resources :cart_items, :only => [:create, :destroy]
   resources :reviews, :except => [:index, :show]
 end
