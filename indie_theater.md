@@ -131,6 +131,7 @@ Improvements
 Optional
 -share
 -Contact Form
+-Dropdown on "My Account" navbar element
 
 Monday
 ===
@@ -148,8 +149,6 @@ Tuesday
 -Customer facebook login: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview and http://tammersaleh.com/posts/managing-heroku-environment-variables-for-local-development 
 -leave reviews
 -Clean up routes
--Dropdown on "My Account" navbar element
-
 
 Wednesday
 ===
