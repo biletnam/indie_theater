@@ -27,7 +27,9 @@
           <p>
 						<% if @now_playing.include?(@movie) %>
 							<p><%= display_score(@movie) %>
-								<%= link_to("Add Rating", new_review_url(:movie_id => @movie.id)) unless current_customer.movies.include?(@movie)  %>
+								<% if customer_signed_in? %>
+									<%= link_to("Add Rating", new_review_url(:movie_id => @movie.id)) unless current_customer.movies.include?(@movie)  %>
+								<% end %>
 							</p>
 						<% end %>
 						<%= @movie.description %> 

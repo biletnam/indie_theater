@@ -35,7 +35,7 @@ module ApplicationHelper
   
   def display_score(movie)
     if movie.reviews.size < 1
-      "No Reviews Yet -"  
+      "No Reviews "  
     else
       string = ""
       score = compute_score(movie)

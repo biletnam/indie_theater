@@ -14,5 +14,5 @@ IndieTheater::Application.routes.draw do
   resources :showtimes
   resources :orders
   resources :cart_items
-  resources :reviews
+  resources :reviews, :except => [:index, :show]
 end
