@@ -29,4 +29,11 @@ class Customer < ActiveRecord::Base
     customer
   end
   
+  def self.new_with_session(params, session)
+    super.tap do |customer|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        customer.email = data["email"] if customer.email.blank?
+      end
+    end
+  end
 end

@@ -126,6 +126,7 @@ Fixes
 
 Improvements
 -Add Caching
+"Are you sure?" buttons for account deletion
 
 Monday
 ===
