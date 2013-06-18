@@ -19,8 +19,7 @@ class Customer < ActiveRecord::Base
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     customer = Customer.where(:provider => auth.provider, :uid => auth.uid).first
     unless customer
-      customer = Customer.create(name:auth.extra.raw_info.name,
-                           provider:auth.provider,
+      customer = Customer.create(provider:auth.provider,
                            uid:auth.uid,
                            email:auth.info.email,
                            password:Devise.friendly_token[0,20]
