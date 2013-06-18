@@ -12,12 +12,19 @@
 			<% end %>
 		</ul>
 	</div><hr>
+
+	<h2 class="orders">Reviews</h2>
+		<ul>
+			<% @reviews.each do |review| %>
+				<li class="order"><%= link_to review.movie.title, edit_review_url(review) %></li>
+			<% end %>
+		</ul><hr>	
 	
 	<h2 class="orders">Orders</h2>
-	
 	<ul>
 		<% @orders.each do |order| %>
 			<li class="order"><%= link_to order.created_at.strftime('%B %d at %l:%M %p'), order_url(order) %></li>
 		<% end %>
-	</ul>
+	</ul>	
+
 </div>

@@ -17,4 +17,25 @@ class ReviewsController < ApplicationController
       render :new
     end
   end
+  
+  def edit
+    @review = Review.find(params[:id])
+    @customer = current_customer
+    @movie = @review.movie
+  end
+  
+  def update
+    @review = Review.find(params[:id])
+    
+    if @review.update_attributes(params[:review])
+      redirect_to customer_url(current_customer)
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    Review.find(params[:id]).destroy
+    redirect_to customer_url(current_customer)
+  end
 end

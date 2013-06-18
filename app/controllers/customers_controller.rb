@@ -7,6 +7,7 @@ class CustomersController < ApplicationController
     @cart_items = current_customer.cart_items
     @orders = current_customer.orders
     @order = Order.new
+    @reviews = current_customer.reviews
   end
   
   def edit
