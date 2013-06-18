@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module ApplicationHelper
   
   def link_to_showtime_day(offset, current_offset)
@@ -20,5 +22,34 @@ module ApplicationHelper
      else 
        link_to("Sign In", new_customer_session_url) 
      end
+  end
+  
+  def compute_score(movie)
+    sum = 0
+    movie.reviews.each do |review|
+      sum += review.score
+    end
+    
+    sum/movie.reviews.size
+  end
+  
+  def display_score(movie)
+    if movie.reviews.size < 1
+      link_to("Be the first to rate this film!", movie_url(movie))  
+    else
+      string = ""
+      score = compute_score(movie)
+
+      score.times do
+        string +=  "&#x2605;"
+      end
+      
+      (4 - score).times do 
+        string += "&#9734;"
+      end
+      
+      string += " (#{movie.reviews.size})"
+      string.html_safe
+    end
   end
 end

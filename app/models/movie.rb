@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Movie < ActiveRecord::Base
   attr_accessible :title, :description, :opening_date, :starring, :director, 
                   :runtime, :released_by, :three_d, :online, :poster, :trailer,
@@ -8,6 +10,7 @@ class Movie < ActiveRecord::Base
   has_many :genres, :through => :movie_genres
   has_many :showtimes
   has_many :tickets, :through => :showtimes
+  has_many :reviews
 
                   
   has_attached_file :poster, :styles => { :small => "78x118", :medium => "198x298" }, 

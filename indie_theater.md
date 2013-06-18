@@ -141,7 +141,10 @@ Tuesday
 ===
 -Fix mail sending
 
--Customer facebook login, leave reviews, share: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview
+-Customer facebook login: https://github.com/plataformatec/devise/wiki/OmniAuth%3A-Overview and http://tammersaleh.com/posts/managing-heroku-environment-variables-for-local-development 
+-leave reviews
+
+-share
 -Contact Form
 -Clean up routes
 -Dropdown on "My Account" navbar element

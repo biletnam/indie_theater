@@ -25,14 +25,15 @@
   
         <div class="movie-text">
           <p>
+						<p><%= display_score(@movie) %></p>
 						<%= @movie.description %> 
-					<br>
-					<br>
-						<strong>Starring:</strong> <%= @movie.starring %><br>
-						<strong>Director:</strong> <%= @movie.director %><br>
-						<strong>Runtime:</strong> <%= "#{@movie.runtime} mins." %><br>
-						<strong>Released By:</strong> <%= @movie.released_by %>
 					</p>
+					<ul>
+						<li><strong>Starring:</strong> <%= @movie.starring %></li>
+						<li><strong>Director:</strong> <%= @movie.director %></li>
+						<li><strong>Runtime:</strong> <%= "#{@movie.runtime} mins." %></li>
+						<li><strong>Released By:</strong> <%= @movie.released_by %></li>
+					</ul>
         </div>
   
       </header>

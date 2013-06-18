@@ -375,7 +375,7 @@
 		height: 300px;
 		padding: 0;
 		border: 1px solid #999;
-		margin: 0 0 50px 0;
+		margin: 0 0 20px 0;
 		background: #333; 
 	}
 	
@@ -407,6 +407,10 @@
 	.movie-text {
 		width: 760px;
 		padding: 0 0 0 20px;
+	}
+	
+	.movie-text > p {
+		margin: 0 0 10px 0;
 	}
 	
 	/* -- SHOWTIMES -- */	
