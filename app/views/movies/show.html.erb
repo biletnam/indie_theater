@@ -25,7 +25,11 @@
   
         <div class="movie-text">
           <p>
-						<p><%= display_score(@movie) %></p>
+						<% if @now_playing.include?(@movie) %>
+							<p><%= display_score(@movie) %>
+								<%= link_to("Add Rating", new_review_url(:movie_id => @movie.id)) unless current_customer.movies.include?(@movie)  %>
+							</p>
+						<% end %>
 						<%= @movie.description %> 
 					</p>
 					<ul>

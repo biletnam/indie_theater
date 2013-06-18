@@ -15,6 +15,7 @@ class Customer < ActiveRecord::Base
   has_many :tickets, :through => :orders
   has_many :cart_items
   has_many :reviews
+  has_many :movies, :through => :reviews
   
   
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

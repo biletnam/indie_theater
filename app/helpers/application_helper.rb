@@ -18,7 +18,7 @@ module ApplicationHelper
   
   def login_logout_link
      if customer_signed_in?
-       link_to "My Account", customer_url(current_customer)
+       link_to("My Account", customer_url(current_customer))
      else 
        link_to("Sign In", new_customer_session_url) 
      end
@@ -30,12 +30,12 @@ module ApplicationHelper
       sum += review.score
     end
     
-    sum/movie.reviews.size
+    (sum.to_f/movie.reviews.size).round
   end
   
   def display_score(movie)
     if movie.reviews.size < 1
-      link_to("Be the first to rate this film!", movie_url(movie))  
+      "No Reviews Yet -"  
     else
       string = ""
       score = compute_score(movie)
