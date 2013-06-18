@@ -2,9 +2,9 @@
 	
 	<h1 class="main-header">Your Rating for: </h1>
 	
-	<h2><%= @movie.title %></h2>
+	<h2 class="sub-header"><%= @movie.title %></h2>
 	
-	<div><%= image_tag @movie.poster.url(:medium) %></div>	
+	<div><%= image_tag @movie.poster.url(:medium), :class => "solo-poster" %></div>	
 	
 	<%= form_for(@review) do |f| %>
 	

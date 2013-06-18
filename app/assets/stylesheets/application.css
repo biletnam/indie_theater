@@ -517,3 +517,15 @@
 	.back-from-order {
 		margin: 20px 0 0 0;
 	}
+	
+	/* -- REVIEWS -- */
+	
+	.sub-header {
+		font-size: 20px;
+		font-weight: bold;
+	}
+	
+	.solo-poster {
+		border: 1px solid #999;
+		margin: 10px 0;
+	}
