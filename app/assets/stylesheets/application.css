@@ -180,6 +180,7 @@
 		width: 620px;
     text-align: center;
 		background: #fff;
+		filter: alpha(opacity=40);
 		opacity: 0.4;
   }
   
