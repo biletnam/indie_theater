@@ -32,7 +32,7 @@
 
 var Carousel = (function(){
 	
-	var delay = 5000;
+	var delay = 6000;
 	var carousel = $("#carousel");
 	var itemsHolder = carousel.find("> ul");
 	var items = itemsHolder.find("> li");
@@ -92,56 +92,46 @@ var Carousel = (function(){
 	}
 	
 	var move = function(){
-		// var html = (currentItem + 1) + " / " + items.length;
-		// numberLabel.html(html);
-		
 		var leftPosition = currentItem * itemWidth * -1;
 		itemsHolder.stop().animate({"left": leftPosition + "px"}, 1000);
+
+		animateDots();
+	}
+	
+	var animateDots = function(){
+		firstButton.html("&#9679;");
+		secondButton.html("&#9679;");
+		thirdButton.html("&#9679;");
 		
 		if(currentItem == 0){
-			firstButton.html("&#9679;");
-			secondButton.html("&#9675;");
-			thirdButton.html("&#9675;");
+			firstButton.html("&#9675;");
 		}
 		else if(currentItem == 1){
-			secondButton.html("&#9679;");
-			firstButton.html("&#9675;");
-			thirdButton.html("&#9675;");
+			secondButton.html("&#9675;");
 		}
 		else{
-			thirdButton.html("&#9679;");
-			firstButton.html("&#9675;");
-			secondButton.html("&#9675;");
+			thirdButton.html("&#9675;");
 		}
 	}
 	
 	var first = function(){
 		currentItem = 0;
-		
-		firstButton.html("&#9679;");
-		secondButton.html("&#9675;");
-		thirdButton.html("&#9675;");
-		
+
+		animateDots();
 		move();
 	}
 	
 	var second = function(){
 		currentItem = 1;
 		
-		secondButton.html("&#9679;");
-		firstButton.html("&#9675;");
-		thirdButton.html("&#9675;");
-		
+		animateDots();
 		move();
 	}
 	
 	var third = function(){
 		currentItem = 2;
 		
-		thirdButton.html("&#9679;");
-		firstButton.html("&#9675;");
-		secondButton.html("&#9675;");
-		
+		animateDots();
 		move();
 	}
 	
