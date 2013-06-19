@@ -11,8 +11,12 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
     now = DateTime.now
+    
     @now_playing = Movie.where("opening_date <= ?", now).online
     @coming_soon = Movie.where("opening_date > ?", now).online
+    
+    @comment = Comment.new
+    @comments = @movie.comments.order("id DESC").all
   end
   
   def new

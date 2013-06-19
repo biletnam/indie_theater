@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  # before_filter :authenticate_customer!
+  before_filter :authenticate_customer!, :only => [:create]
   
   def index
     @comment = Comment.new
@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.new(params[:comment])
+    @comment.customer_id = current_customer.id
     @comment.save
     
     if request.xhr?
