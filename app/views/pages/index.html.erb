@@ -15,15 +15,15 @@
 				<li><%= link_to (image_tag "now_you_see_me.jpg"), "/movies/2" %></li>
 				<li><%= link_to (image_tag "man-of-steel-henry-cavill5.jpg"), "/movies/3" %></li>
 				<li><%= link_to (image_tag "the-internship.jpg"), "/movies/1" %></li>
-			</ul>			
+			</ul>	
     </div>
-		
-	  <div id="carousel-nav">
-	    <span class="previous">Previous</span> &mdash;
-	    <strong class="number">0 / 0</strong> &mdash;
-	    <span class="next">Next</span>
-	  </div>
   
+	  <div id="carousel-nav">
+	    <span class="first">&#9675;</span>
+	    <span class="second">&#9675;</span>
+	    <span class="third">&#9675;</span>
+	  </div>		
+		
   </section>
 </div>
 
@@ -40,9 +40,9 @@ var Carousel = (function(){
 	var currentItem = -1;
 	var timerId;
 	
-	var nextButton = $("#carousel-nav > .next");
-  var previousButton = $("#carousel-nav > .previous");
-  var numberLabel = $("#carousel-nav > .number");
+  var firstButton = $("#carousel-nav > .first");
+  var secondButton = $("#carousel-nav > .second");	
+	var thirdButton = $("#carousel-nav > .third");
 	
 	var init = function(){
 		itemsHolder.css({"width": (items.length * itemWidth) + "px"});
@@ -51,8 +51,9 @@ var Carousel = (function(){
 	};
 	
   var bind = function(){
-    nextButton.on("click", next);
-    previousButton.on("click", previous);
+    firstButton.on("click", first);
+    secondButton.on("click", second);
+    thirdButton.on("click", third);
   }
 	
 	var start = function(){
@@ -91,11 +92,57 @@ var Carousel = (function(){
 	}
 	
 	var move = function(){
-		var html = (currentItem + 1) + " / " + items.length;
-		numberLabel.html(html);
+		// var html = (currentItem + 1) + " / " + items.length;
+		// numberLabel.html(html);
 		
 		var leftPosition = currentItem * itemWidth * -1;
 		itemsHolder.stop().animate({"left": leftPosition + "px"}, 1000);
+		
+		if(currentItem == 0){
+			firstButton.html("&#9679;");
+			secondButton.html("&#9675;");
+			thirdButton.html("&#9675;");
+		}
+		else if(currentItem == 1){
+			secondButton.html("&#9679;");
+			firstButton.html("&#9675;");
+			thirdButton.html("&#9675;");
+		}
+		else{
+			thirdButton.html("&#9679;");
+			firstButton.html("&#9675;");
+			secondButton.html("&#9675;");
+		}
+	}
+	
+	var first = function(){
+		currentItem = 0;
+		
+		firstButton.html("&#9679;");
+		secondButton.html("&#9675;");
+		thirdButton.html("&#9675;");
+		
+		move();
+	}
+	
+	var second = function(){
+		currentItem = 1;
+		
+		secondButton.html("&#9679;");
+		firstButton.html("&#9675;");
+		thirdButton.html("&#9675;");
+		
+		move();
+	}
+	
+	var third = function(){
+		currentItem = 2;
+		
+		thirdButton.html("&#9679;");
+		firstButton.html("&#9675;");
+		secondButton.html("&#9675;");
+		
+		move();
 	}
 	
 	return {

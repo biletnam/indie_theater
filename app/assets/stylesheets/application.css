@@ -175,15 +175,13 @@
 
   #carousel-nav {
     text-align: center;
-  }
+/*		background: #e74c3c;
+*/  }
   
   #carousel-nav > span {
     cursor: pointer;
-  }
-  
-  #carousel-nav > span:hover {
-    text-decoration: underline;
-  }
+  	font-size: 20px;
+	}
 
 	/* --- SIDEBAR --- */
 
