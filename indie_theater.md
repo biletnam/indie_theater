@@ -125,8 +125,8 @@ Features for this week:
 Fixes
 
 Improvements
-
 "Are you sure?" buttons for account deletion
+AJAX star rating system
 
 Optional
 -share
@@ -153,6 +153,8 @@ Tuesday
 Wednesday
 ===
 -Add Caching
+AJAX comments using UJS
+
 
 Thursday
 ===

@@ -12,6 +12,7 @@ class Movie < ActiveRecord::Base
   has_many :tickets, :through => :showtimes
   has_many :reviews
   has_many :customers, :through => :reviews
+  has_many :comments
 
                   
   has_attached_file :poster, :styles => { :small => "78x118", :medium => "198x298" }, 
