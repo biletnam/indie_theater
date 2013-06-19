@@ -15,4 +15,5 @@ IndieTheater::Application.routes.draw do
   resources :orders, :only => [:show, :create, :destroy]
   resources :cart_items, :only => [:create, :destroy]
   resources :reviews, :except => [:index, :show]
+  resources :comments
 end
