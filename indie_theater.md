@@ -125,7 +125,7 @@ Features for this week:
 Fixes
 
 Improvements
--Add Caching
+
 "Are you sure?" buttons for account deletion
 
 Optional
@@ -152,6 +152,7 @@ Tuesday
 
 Wednesday
 ===
+-Add Caching
 
 Thursday
 ===
