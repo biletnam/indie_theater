@@ -1,18 +1,29 @@
 <div class="content group">
+	<div class="about">
 
   <h1 class="main-header">About</h1>
 
-	<p>This is James Pothen's capstone project for App Academy. It is built in Ruby on Rails, with Javascript and jQuery giving it some shine.</p>
+	<p class="about-text">This is <%= link_to "James Pothen's", "http://www.jamespothen.com", :target => "blank" %> capstone project for <%= link_to "App Academy", "http://www.appacademy.io/", :target => "blank" %>. It is built in Ruby on Rails, with Javascript and jQuery giving it some shine.</p>
 	
-	<p>Why?</p>
+	<h2 class="sub-header">Why a Movie Theater?</h2>
 	
-	 Some cool stuff you'll see as you click around:</p>
-	<ul>
+	<p class="about-text">Because not all theaters let you buy through Fandango. And local cinemas shouldn't have to make do with lousy websites.</p>
+	
+	<h2 class="sub-header">Noteworthy Features: </h2>
+	<ul class="about-text about-list">
 		<li>Facebook Login for painless registration</li>
-		<li>jQuery powered Carousel on the homepage</li>
-		<li>Caching for faster page loads</li>
-		<li>Fast initial load time thanks to a Heroku Pinger</li>
-		<li>Clever day of the week </li>
+		<li>jQuery-powered Carousel on the homepage</li>
+		<li>Fast initial load thanks to a Heroku Pinger</li>
+		<li>Caching for quick subsequent page loads</li>
+		<li>Clever day of the week display on Showtimes</li>
 	</ul>
 
+	<h2 class="sub-header">Like What You See?</h2>
+		
+	<ol class="about-text">
+		<li><%= link_to "Here's my resume.", "http://jamespothen.com/WebEngineer_JamesPothen_Online.pdf", :target => "blank" %> </li> 
+		<li><%= link_to "Hire me!", "http://jamespothen.com/connect", :target => "blank" %></li>
+	</ol>
+
+	</div>
 </div>
