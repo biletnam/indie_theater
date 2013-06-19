@@ -39,13 +39,16 @@
 						<li><strong>Director:</strong> <%= @movie.director %></li>
 						<li><strong>Runtime:</strong> <%= "#{@movie.runtime} mins." %></li>
 						<li><strong>Released By:</strong> <%= @movie.released_by %></li>
-					</ul>
+					</ul>				
         </div>
+				
+				<div class="movie-comments">
+					<%= render "/comments/comments" %>
+				</div>
   
       </header>
     </article>
-		
+					
 	</section>
 	
-	<%= render "/comments/comments" %>
 </div>

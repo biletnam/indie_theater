@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
     @coming_soon = Movie.where("opening_date > ?", now).online
     
     @comment = Comment.new
-    @comments = @movie.comments.order("id DESC").all
+    @comments = @movie.comments.order("id").all
   end
   
   def new

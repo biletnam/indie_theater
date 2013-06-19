@@ -1,5 +1,12 @@
+<h1 class="sub-header">Comments</h1><hr>
+
+<section class="comments">
+
+	<%= render @comments %>
+
+</section>
+
 <% if customer_signed_in? %>
-	<h1>Your Thoughts?</h1>
 
 	<%= form_for(@comment, remote: true, html: {id: "comment-form"}) do |f| %>
 		<%= f.label :body, "Write a new comment..." %><br>
@@ -8,15 +15,11 @@
 		<%= f.submit %>
 	<% end %>
 
+	<% else %>
+	
+	<%= link_to "Sign in to comment", new_customer_session_url %>
+
 <% end %>
-
-<h2>Comments</h2>
-
-<section class="comments">
-
-	<%= render @comments %>
-
-</section>
 
 <script>
 	$(document).ready(function(){

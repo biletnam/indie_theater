@@ -411,6 +411,15 @@
 		margin: 0 0 10px 0;
 	}
 	
+	.movie-comments {
+		width: 760px;
+		padding: 20px 0;
+	}
+	
+	.movie-comments footer {
+		padding: 10px 0 0 0 ;
+	}
+	
 	/* -- SHOWTIMES -- */	
 	
 	.day-list {
@@ -450,12 +459,14 @@
 	
 	.notice {
  		background: #bdc3c7;
-		color: black;
+		color: #333;
+		text-align: center;
 	}
 	
 	.alert {
 		background: #bdc3c7;
-		color: black;
+		color: #333;
+		text-align: center;
 	}
 	
 	/* -- ADMIN CONTROLS -- */
