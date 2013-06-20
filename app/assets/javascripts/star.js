@@ -6,20 +6,42 @@ var Star = (function(){
 	var fourthStar = $("#rating > .star-4");
 	
 	var init = function(){
-		console.log("init!");
 		bind();
 	}
 	
 	var bind = function(){
-		firstStar.on("click", hello);
-		secondStar.on("click", hello);
-		thirdStar.on("click", hello);
-		fourthStar.on("click", hello);
-		console.log("bind!");
+		firstStar.on("click", first);
+		secondStar.on("click", second);
+		thirdStar.on("click", third);
+		fourthStar.on("click", fourth);
 	}
 	
-	var hello = function(){
-		console.log("A star!");
+	var first = function(){
+		firstStar.html('★');
+		secondStar.html('☆');
+		thirdStar.html('☆');
+		fourthStar.html('☆');
+	}
+	
+	var second = function(){
+		firstStar.html('★');
+		secondStar.html('★');
+		thirdStar.html('☆');
+		fourthStar.html('☆');
+	}
+	
+	var third = function(){
+		firstStar.html('★');
+		secondStar.html('★');
+		thirdStar.html('★');
+		fourthStar.html('☆');
+	}
+	
+	var fourth = function(){
+		firstStar.html('★');
+		secondStar.html('★');
+		thirdStar.html('★');
+		fourthStar.html('★');
 	}
 	
 	return {
