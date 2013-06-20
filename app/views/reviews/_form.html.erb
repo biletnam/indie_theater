@@ -7,7 +7,23 @@
 <%= form_for(@review) do |f| %>
 
 <div id="rating">
-	<span class="star-4">☆</span><span class="star-3">☆</span><span class="star-2">☆</span><span class="star-1">☆</span>
+	<%= f.radio_button :score, 1, :hidden => true %>
+	<%= label :score_1, 1, "☆", :class => "star-4" %>
+	
+	<%= f.radio_button :score, 2, :hidden => true %>
+	<%= label :score_2, 2, "☆", :class => "star-3" %>
+	
+	<%= f.radio_button :score, 3, :hidden => true %>
+	<%= label :score_3, 3, "☆", :class => "star-2" %>
+	
+	<%= f.radio_button :score, 4, :hidden => true %>
+	<%= label :score_4, 4, "☆", :class => "star-1" %>
+	
+
+	
+	
+	
+	<!-- <input type="radio" name="rev"><label class="star-4">☆</label><label class="star-3">☆</label><label class="star-2">☆</label><label class="star-1">☆</label> -->
 </div>
 	
 <%= f.hidden_field :customer_id, :value => @customer.id %>

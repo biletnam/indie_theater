@@ -545,19 +545,14 @@
 		margin: 10px 0;
 	}
 	
-	.rating > span:hover:before {
-		content: "\2605";
-		position: absolute;
-	}
-	
 	#rating {
 		unicode-bidi: bidi-override;
 		direction: rtl;
-		width: 65px;
+		width: 90px;
 	}
 	
-	#rating > span:hover:before,
-	#rating > span:hover ~ span:before {
+	#rating > label:hover:before,
+	#rating > label:hover ~ label:before {
 		content: "\2605";
 		position: absolute;
 	}
