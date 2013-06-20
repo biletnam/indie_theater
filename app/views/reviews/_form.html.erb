@@ -6,8 +6,8 @@
 
 <%= form_for(@review) do |f| %>
 
-<div class="rating">
-	<span id="star-1">☆</span><span id="star-2">☆</span><span id="star-3">☆</span><span id="star-4">☆</span>
+<div id="rating">
+	<span class="star-1">☆</span><span class="star-2">☆</span><span class="star-3">☆</span><span class="star-4">☆</span>
 </div>
 	
 <%= f.hidden_field :customer_id, :value => @customer.id %>
@@ -17,3 +17,10 @@
 <%= f.submit %>
 
 <% end %>
+
+<%= javascript_include_tag "star" %>	
+<script>
+	$(document).ready(function(){
+		Star.init();
+	});
+</script>

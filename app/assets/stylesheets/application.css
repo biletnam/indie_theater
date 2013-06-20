@@ -550,19 +550,18 @@
 		position: absolute;
 	}
 	
-	.rating {
+	#rating {
 		unicode-bidi: bidi-override;
 		direction: rtl;
 		width: 65px;
 	}
 	
-	.rating > span:hover:before,
-	.rating > span:hover ~ span:before {
+	#rating > span:hover:before,
+	#rating > span:hover ~ span:before {
 		content: "\2605";
 		position: absolute;
 	}
 	
-
 	
 	/* -- ABOUT -- */
 	

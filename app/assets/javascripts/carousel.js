@@ -16,7 +16,7 @@ var Carousel = (function(){
 		itemsHolder.css({"width": (items.length * itemWidth) + "px"});
 		bind();
 		start();
-	};
+	}
 	
   var bind = function(){
     firstButton.on("click", first);
@@ -111,7 +111,3 @@ var Carousel = (function(){
 		stop: stop
 	}
 })();
-
-$(document).ready(function(){
-	Carousel.init();
-});

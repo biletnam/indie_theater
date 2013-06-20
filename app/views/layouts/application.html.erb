@@ -4,6 +4,7 @@
   <title>IndieTheater</title>
 	<link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -43,7 +44,7 @@
 		</ul>
 	</nav>
 	
-</footer>	
-	<%= javascript_include_tag "application" %>
+</footer>
+	<%= javascript_include_tag "carousel" %>	
 </body>
 </html>
