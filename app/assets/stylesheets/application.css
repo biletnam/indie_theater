@@ -548,7 +548,7 @@
 	#rating {
 		unicode-bidi: bidi-override;
 		direction: rtl;
-		width: 100px;
+		width: 135px;
 	}
 	
 	#rating > label:hover:before,

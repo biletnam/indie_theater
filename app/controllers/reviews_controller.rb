@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     
     if @review.update_attributes(params[:review])
-      redirect_to customer_url(current_customer)
+      redirect_to movie_url(@review.movie)
     else
       render :edit
     end
