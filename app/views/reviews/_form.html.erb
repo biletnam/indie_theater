@@ -7,19 +7,19 @@
 <%= form_for(@review) do |f| %>
 
 <div id="rating">
-	<%= f.radio_button :score, 1, :hidden => true %>
-	<%= label :score_1, 1, "☆", :class => "star-4" %>
+	<%= f.radio_button :score, 4, :hidden => true %>
+	<%= f.label :score_4, "☆", :class => "star-4" %>
 	
-	<%= f.radio_button :score, 2, :hidden => true %>
-	<%= label :score_2, 2, "☆", :class => "star-3" %>
 	
 	<%= f.radio_button :score, 3, :hidden => true %>
-	<%= label :score_3, 3, "☆", :class => "star-2" %>
+	<%= f.label :score_3, "☆", :class => "star-3" %>
 	
-	<%= f.radio_button :score, 4, :hidden => true %>
-	<%= label :score_4, 4, "☆", :class => "star-1" %>
-	
+	<%= f.radio_button :score, 2, :hidden => true %>
+	<%= f.label :score_2, "☆", :class => "star-2" %>
 
+	
+	<%= f.radio_button :score, 1, :hidden => true %>
+	<%= f.label :score_1, "☆", :class => "star-1" %>
 	
 	
 	
