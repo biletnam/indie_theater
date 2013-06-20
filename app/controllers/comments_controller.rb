@@ -1,11 +1,6 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_customer!, :only => [:create]
   
-  def index
-    @comment = Comment.new
-    @comments = Comment.order("id DESC").all
-  end
-  
   def create
     @comment = Comment.new(params[:comment])
     @comment.customer_id = current_customer.id

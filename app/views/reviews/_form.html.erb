@@ -6,14 +6,9 @@
 
 <%= form_for(@review) do |f| %>
 
-<div><select id="review_score" name="review[score]">
-	<option value="0">0</option>
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-</select>
-	Star(s)</div>
+<div class="rating">
+	<span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div>
 	
 <%= f.hidden_field :customer_id, :value => @customer.id %>
 
