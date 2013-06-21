@@ -158,7 +158,7 @@ AJAX comments using UJS
 Thursday
 ===
 AJAX star rating system
-Pre-fetch relevant data during SQL queries in controller
 
 Friday
 ===
+Pre-fetch relevant data during SQL queries in controller
