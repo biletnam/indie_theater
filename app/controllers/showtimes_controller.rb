@@ -13,7 +13,7 @@ class ShowtimesController < ApplicationController
   
   def show
     @customer = current_customer
-    @showtime = Showtime.find(params[:id])
+    @showtime = Showtime.find(params[:id], :include => :movie)
     @movie = @showtime.movie
     @cart_item = CartItem.new
   end
