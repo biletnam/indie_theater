@@ -1,29 +1,33 @@
-<div class="content group">
-	<div class="static">
+<% cache do %>
 
-  <h1 class="main-header">About</h1>
+	<div class="content group">
+		<div class="static">
 
-	<p class="static-text">This is <%= link_to "James Pothen's", "http://www.jamespothen.com", :target => "blank" %> capstone project for <%= link_to "App Academy", "http://www.appacademy.io/", :target => "blank" %>. It is built in Ruby on Rails, with Javascript and jQuery giving it some shine.</p>
-	
-	<h2 class="sub-header">Why a Movie Theater?</h2>
-	
-	<p class="static-text">Because local cinemas that show beautiful films should have beautiful websites.</p>
-	
-	<h2 class="sub-header">Noteworthy Features: </h2>
-	<ul class="static-text static-list">
-		<li>Facebook Login for painless registration</li>
-		<li>jQuery-powered Carousel on the homepage</li>
-		<li>Fast initial load thanks to a Heroku Pinger</li>
-		<li>Caching for quick subsequent page loads</li>
-		<li>Clever day of the week display on Showtimes</li>
-	</ul>
+	  <h1 class="main-header">About</h1>
 
-	<h2 class="sub-header">Like What You See?</h2>
+		<p class="static-text">This is <%= link_to "James Pothen's", "http://www.jamespothen.com", :target => "blank" %> capstone project for <%= link_to "App Academy", "http://www.appacademy.io/", :target => "blank" %>. It is built in Ruby on Rails, with Javascript and jQuery giving it some shine.</p>
+	
+		<h2 class="sub-header">Why a Movie Theater?</h2>
+	
+		<p class="static-text">Because local cinemas that show beautiful films should have beautiful websites.</p>
+	
+		<h2 class="sub-header">Noteworthy Features: </h2>
+		<ul class="static-text static-list">
+			<li>Facebook Login for painless registration</li>
+			<li>jQuery-powered Carousel on the homepage</li>
+			<li>Fast initial load thanks to a Heroku Pinger</li>
+			<li>Caching for quick subsequent page loads</li>
+			<li>Clever day of the week display on Showtimes</li>
+		</ul>
+
+		<h2 class="sub-header">Like What You See?</h2>
 		
-	<ol class="static-text">
-		<li><%= link_to "Here's my resume.", "http://jamespothen.com/WebEngineer_JamesPothen_Online.pdf", :target => "blank" %> </li> 
-		<li><%= link_to "Hire me!", "http://jamespothen.com/connect", :target => "blank" %></li>
-	</ol>
+		<ol class="static-text">
+			<li><%= link_to "Here's my resume.", "http://jamespothen.com/WebEngineer_JamesPothen_Online.pdf", :target => "blank" %> </li> 
+			<li><%= link_to "Hire me!", "http://jamespothen.com/connect", :target => "blank" %></li>
+		</ol>
 
+		</div>
 	</div>
-</div>
+
+<% end %>
