@@ -1,7 +1,7 @@
-<article>
+<article class="ind-comment">
 	<div><%= comment.body %></div>
 	
-	<footer>
+	<footer class="comment-authorship">
 		<small>
 			<strong><%= comment.customer.email %></strong>
 			<time><%= time_ago_in_words(comment.created_at) %> ago</time>

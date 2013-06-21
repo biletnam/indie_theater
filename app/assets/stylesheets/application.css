@@ -407,9 +407,9 @@
 	}
 	
 	.movie-text {
-		width: 760px;
-		padding: 0 0 0 20px;
-	}
+		width: 600px;
+/*		padding: 0 0 0 20px;
+*/	}
 	
 	.movie-text > p {
 		margin: 0 0 10px 0;
@@ -568,4 +568,30 @@
 	
 	.static-list {
 		list-style: square inside;
+	}
+	
+	/* -- COMMENTS -- */
+	
+	.comment-body {
+		height: 100px;
+		width: 300px;
+		font-size: 15px;
+		margin: 10px 0;
+	}
+	
+	.post-comment {
+		background: #e74c3c;
+		color: #fff;
+		border-radius: 5px;
+		border: 0;
+		cursor: pointer;
+		font-size: 13px;
+	}
+	
+	.ind-comment {
+		margin: 10px 0;
+	}
+	
+	.comment-authorship {
+		font-size: 13px;
 	}

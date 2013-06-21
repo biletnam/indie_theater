@@ -9,10 +9,9 @@
 <% if customer_signed_in? %>
 
 	<%= form_for(@comment, remote: true, html: {id: "comment-form"}) do |f| %>
-		<%= f.label :body, "Write a new comment..." %><br>
-		<%= f.text_area :body %><br>
+		<%= f.text_area :body, :placeholder => "What do you think?", :class => "comment-body" %><br>
 		<%= f.hidden_field :movie_id, :value => @movie.id %>
-		<%= f.submit %>
+		<%= f.submit "Post Comment", :class => "post-comment" %>
 	<% end %>
 
 	<% else %>
