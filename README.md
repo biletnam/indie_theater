@@ -40,6 +40,9 @@ jQuery carousels, page caching, facebook login, full CRUD for all models, dynami
 1. Change name of "customer" class to "user"
 2. Add a "name" field to user class and integrate with facebook signup
 3. Add google map embed to "about" page.
+4. Move delete button in admin controls
+5. Add dropdown to navbar once user is logged in
+6. Change comments displaying email to name
 
 ##Link
 http://indietheater.herokuapp.com/
